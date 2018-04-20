@@ -19,10 +19,6 @@ describe ApplicationHelper do
       end
     end
   end
-  describe "Next event url helper" do
-    it "is return true url when next event is always planned" do
-    end
-  end
 
   describe 'next_event_url' do
     before do
