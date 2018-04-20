@@ -23,8 +23,8 @@
             アドバイスをし、 そしてモノづくりの楽しさを共有します！</p>
         </div>
         <div class="header-section-button">
-          <% unless next_event_url_helper.nil? %>
-            <%= link_to "次回の開催Check!", next_event_url_helper, class: 'btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-js-ripple-effect' %>
+          <% unless next_event_url.nil? %>
+            <%= link_to "次回の開催Check!", next_event_url, class: 'btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-js-ripple-effect' %>
           <% end %>
         </div>
       </div>

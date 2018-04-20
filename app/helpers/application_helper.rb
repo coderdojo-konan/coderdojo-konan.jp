@@ -8,7 +8,7 @@ module ApplicationHelper
       end
   end
 
-  def next_event_url_helper
+  def next_event_url
     latest_event = get_latest_event
     if Date.parse(latest_event['started_at']) > Date.today
       latest_event['event_url']
