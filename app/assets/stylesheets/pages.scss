@@ -3,8 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .pages-layout {
     .pages-layout__header {
-        background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), image-url('coderdojo-konan-header-image-1.jpg');
-        background-size: cover;
+    	background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), image-url('coderdojo-konan-header-image-1.jpg');
+    	background-size: cover;
     	background-position: center;
         .mdl-layout__header-row {
             margin-top: 0.5rem;
