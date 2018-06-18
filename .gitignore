@@ -16,4 +16,4 @@
 !/log/.keep
 /tmp
 /coverage
-config/master.key
+/config/master.key
