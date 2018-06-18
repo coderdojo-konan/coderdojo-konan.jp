@@ -66,6 +66,9 @@
                 %li PHP, Python, Ruby, Unity
                 %li Arduino, Raspberry Pi など
               %p 道場ごとに内容も規模も違いますが、Ninjaの自主性を重視している姿勢は一緒です。
+            - unless next_event_url.nil?
+              .mdl-card__actions.mdl-card--borde.next-event-button
+                = link_to "次回の開催Check!", next_event_url, class: 'btn mdl-button mdl-button--colored mdl-button--raised mdl-js-button mdl-js-ripple-effect'
         %section#language-section
           .language-section-card.mdl-card.mdl-shadow--2dp
             .mdl-card__title
@@ -73,19 +76,19 @@
             .mdl-card__supporting-text
               .mdl-grid
                 .mdl-cell.mdl-cell--3-col.mdl-cell--8-col-tablet.language-section-card-cell
-                  %img{:alt => "Scratch Cat", :src => "#{asset_path "scratch-cat.png"}"}/
+                  %img{:alt => "Scratch Cat", :src => "#{asset_path "index/scratch-cat.png"}"}/
                   %p
                     %a{:href => "https://scratch.mit.edu/"} Scratch
                 .mdl-cell.mdl-cell--3-col.mdl-cell--8-col-tablet.language-section-card-cell
-                  %img{:alt => "Java Logo", :src => "#{asset_path "java-original.png"}"}/
+                  %img{:alt => "Java Logo", :src => "#{asset_path "index/java-original.png"}"}/
                   %p
                     %a{:href => "https://www.java.com/ja/"} Java
                 .mdl-cell.mdl-cell--3-col.mdl-cell--8-col-tablet.language-section-card-cell
-                  %img{:alt => "Web系言語", :src => "#{asset_path "web-lang.png"}"}/
+                  %img{:alt => "Web系言語", :src => "#{asset_path "index/web-lang.png"}"}/
                   %p
                     %a HTML・CSS・JavaScript
                 .mdl-cell.mdl-cell--3-col.mdl-cell--8-col-tablet.language-section-card-cell
-                  %img{:alt => "Ruby (on Rails)", :src => "#{asset_path "ruby-original.png"}"}/
+                  %img{:alt => "Ruby (on Rails)", :src => "#{asset_path "index/ruby-original.png"}"}/
                   %p
                     %a{:href => "https://www.ruby-lang.org/ja/"} Ruby (on Rails)
         %section#summary-section
@@ -112,15 +115,15 @@
               %h3 CoderDojo 岡山 岡南 は、これらのパートナー様のご支援によって成り立っております！
               %ul.partner-list
                 %li.partner-list-item
-                  %img#sakura-internet-logo{:src => "#{asset_path "sakura-internet.png"}"}/
+                  %img#sakura-internet-logo{:src => "#{asset_path "index/supporter/sakura-internet.png"}"}/
                   .mdl-tooltip{"data-mdl-for" => "sakura-internet-logo"} 「さくらのクラウド」の無償提供
                   %p SAKURA INTERNET INC. 様
                 %li.partner-list-item
-                  %img#esa-io-logo{:src => "#{asset_path "esa.png"}"}/
+                  %img#esa-io-logo{:src => "#{asset_path "index/supporter/esa.png"}"}/
                   .mdl-tooltip{"data-mdl-for" => "esa-io-logo"} ドキュメント共有サービスの提供
                   %p ESA.IO 様
                 %li.partner-list-item
-                  %img#rimgate-logo{:src => "#{asset_path "non-logo.png"}"}/
+                  %img#rimgate-logo{:src => "#{asset_path "index/supporter/non-logo.png"}"}/
                   .mdl-tooltip{"data-mdl-for" => "rimgate-logo"} サーバー・ドメイン代などの支援
                   %p リムゲイト株式会社 様
         %section#contact-section

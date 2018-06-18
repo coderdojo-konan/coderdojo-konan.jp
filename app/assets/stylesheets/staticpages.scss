@@ -51,9 +51,15 @@
 }
 main {
 article {
-    margin: 0.5rem;
+    margin-top: 3rem;
+    margin: 1rem;
     #about-section {
-      padding: 0.8rem;
+      padding: 1rem;
+      .mdl-card__title {
+        height: 25rem;
+        background: linear-gradient(rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8)  90%, rgba(0, 0, 0, 1)), image-url('index/introduction-image/dojo-image-05.jpg') center / cover;
+        color: snow;
+      }
       .twitter-share-button-style {
         vertical-align: top;
         display: inline-block;
@@ -67,11 +73,14 @@ article {
       .about-section-card {
         width: 100%;
         height: 100%;
-        padding: 0.5rem;
+        // padding: 0.5rem;
+      }
+      .next-event-button {
+        margin: 1rem;
       }
     }
     #language-section {
-      padding: 0.8rem;
+      padding: 1rem;
       .language-section-card {
         width: 100%;
         height: 100%;
@@ -88,7 +97,7 @@ article {
       }
     }
     #summary-section {
-      padding: 0.8rem;
+      padding: 1rem;
       .summary-section-card {
         width: 100%;
         height: 100%;
@@ -96,7 +105,7 @@ article {
       }
     }
     #partner-section {
-      padding: 0.8rem;
+      padding: 1rem;
       .partner-section-card {
         width: 100%;
         height: 100%;
@@ -140,7 +149,7 @@ article {
       }
     }
     #contact-section {
-      padding: 0.8rem;
+      padding: 1rem;
       .contact-section-card {
         width: 100%;
         height: 100%;
