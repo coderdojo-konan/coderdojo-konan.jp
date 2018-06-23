@@ -319,7 +319,7 @@ DEPENDENCIES
   kramdown (~> 1.1.0)
   listen
   omniauth-slack
-  pg (= 0.21.0)
+  pg
   rails (= 5.2.0)
   rails-controller-testing
   rest-client
@@ -336,4 +336,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.16.1
+   1.16.2
