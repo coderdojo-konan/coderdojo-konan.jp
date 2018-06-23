@@ -29,7 +29,9 @@
             アドバイスをし、 そしてモノづくりの楽しさを共有します！
         .header-section-button
           - unless next_event_url.nil?
-            = link_to "次回の開催Check!", next_event_url, class: 'btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-js-ripple-effect'
+            = link_to "次回の開催をCheck!", next_event_url, class: 'btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-js-ripple-effect', target: "_new"
+          - else
+            = link_to "申し込みページは只今準備中です！", root_url, class: 'btn btn-disabled mdl-button mdl-js-button'
     .mdl-layout__drawer
       %span.mdl-layout-title CoderDojo Konan Okayama Official Site
       %nav.mdl-navigation
@@ -68,7 +70,10 @@
               %p 道場ごとに内容も規模も違いますが、Ninjaの自主性を重視している姿勢は一緒です。
             - unless next_event_url.nil?
               .mdl-card__actions.mdl-card--borde.next-event-button
-                = link_to "次回の開催Check!", next_event_url, class: 'btn mdl-button mdl-button--colored mdl-button--raised mdl-js-button mdl-js-ripple-effect'
+                = link_to "次回の開催をCheck!", next_event_url, class: 'btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-js-ripple-effect', target: "_new"
+            - else
+              .mdl-card__actions.mdl-card--borde.next-event-button
+                = link_to "申し込みページは只今準備中です！", root_url, class: 'btn btn-disabled mdl-button mdl-js-button'
         %section#language-section
           .language-section-card.mdl-card.mdl-shadow--2dp
             .mdl-card__title
