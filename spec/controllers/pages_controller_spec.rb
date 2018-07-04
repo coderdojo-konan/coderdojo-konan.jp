@@ -1,4 +1,5 @@
 require 'rails_helper'
+include MarkdownHelper
 
 RSpec.describe PagesController, type: :controller do
   describe "Request GET #index" do
@@ -13,10 +14,10 @@ RSpec.describe PagesController, type: :controller do
       param    = 'visit-interview'
       get :show, params: {:id => param}
       page      = Page.new(param)
-      expected = Kramdown::Document.new(page.content).to_html
+      expected = MarkdownHelper.md_to_html page.content
       expect(assigns(:content)).to eq expected
     end
-    
+
     context "ファイル名が存在する時" do
       before do
         get :show, params: {:id => 'not_found_hoge_hoge'}

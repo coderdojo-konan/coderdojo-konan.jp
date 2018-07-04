@@ -27,9 +27,9 @@ gem 'travis'
 
 gem 'haml-rails'
 
-gem "kramdown", "~> 1.1.0"
+# gem 'kramdown', '~> 1.1.0'
 
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 
 gem 'bcrypt', '3.1.11'
 
@@ -37,12 +37,20 @@ gem 'omniauth-slack'
 
 gem 'bootsnap'
 
-gem "pg"
+gem 'pg'
+
+gem 'bootstrap', '~> 4.1.1'
+
+gem 'simple_form'
+
+gem 'redcarpet'
+
+gem 'slack-notifier'
+
+gem 'toastr-rails'
 
 group :development, :test do
-  # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
   gem 'rspec-rails'
@@ -52,9 +60,9 @@ group :development, :test do
 end
 
 group :test do
-  gem "simplecov"
-  gem "codeclimate-test-reporter", "~> 1.0.0"
-  gem "timecop"
+  gem 'simplecov'
+  gem 'codeclimate-test-reporter', '~> 1.0.0'
+  gem 'timecop'
 end
 
 group :development do

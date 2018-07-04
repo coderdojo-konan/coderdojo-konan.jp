@@ -1,190 +1,215 @@
-%body
-  - provide(:desc, 'CoderDojo 岡山 岡南 の公式サイトです。 CoderDojo とは、小中高生を対象とした無料プログラミング道場です。参加者（ニンジャ）の作りたいものを先生（メンター）がニンジャ目線で一緒に考え、アドバイスをし、 そしてモノづくりの楽しさを共有します！')
-  .mdl-layout.mdl-js-layout
-    %header.mdl-layout__header.mdl-layout__header--scroll.layout-transparent
-      .mdl-layout__header-row
-        / Title
-        %span.mdl-layout-title
-          %img{:alt => "CoderDojo Konan Okayama", :src => "#{asset_path "coderdojo-konan-header-logo.png"}"}/
-        / Add spacer, to align navigation to the right
-        .mdl-layout-spacer
-        / Navigation
-        %nav.mdl-navigation
-          %a.mdl-navigation__link{:href => "#{@first_link[:url]}"}= @first_link[:text]
-          %a.mdl-navigation__link{:href => "#{@second_link[:url]}"}= @second_link[:text]
-          %a.mdl-navigation__link{:href => "#{@third_link[:url]}"}= @third_link[:text]
-          %a.mdl-navigation__link{:href => "#{@fourth_link[:url]}"}= @fourth_link[:text]
-      .header-section
-        .header-section-text
-          %h2 子供のためのプログラミング道場
-          %h1 CoderDojo Konan Okayama
+%header.masthead.text-center.text-white.d-flex
+  .container.my-auto
+    .row
+      .col-lg-10.mx-auto
+        %h2 子供のためのプログラミング道場
+        %h1
+          %strong> CoderDojo Konan Okayama
+        %hr.light.my-4/
+      .col-lg-10.mx-auto
+        %p.mb-2
+          %strong>"CoderDojo"
+          とは小中高生を対象とした
+          %strong>"無料プログラミングコミュニティ"
+          です。
+        %br
+        %p.mb-5
+          %strong>"アイデア"
+          を形にする
+          %strong>"楽しさ"
+          を体感し、
           %br/
-          %p
-            CoderDojo 岡山 岡南 は、小中高生を対象とした
-            %strong> 無料プログラミング道場
-            です。
-            %br/
-            参加者（ニンジャ）の作りたいものを先生（メンター）がニンジャ目線で一緒に考え、
-            %br/
-            アドバイスをし、 そしてモノづくりの楽しさを共有します！
-        .header-section-button
-          - unless next_event_url.nil?
-            = link_to "次回の開催をCheck!", next_event_url, class: 'btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-js-ripple-effect', target: "_new"
-          - else
-            = link_to "申し込みページは只今準備中です！", root_url, class: 'btn btn-disabled mdl-button mdl-js-button'
-    .mdl-layout__drawer
-      %span.mdl-layout-title CoderDojo Konan Okayama Official Site
-      %nav.mdl-navigation
-        %a.mdl-navigation__link{:href => "#{@first_link[:url]}"}= @first_link[:text]
-        %a.mdl-navigation__link{:href => "#{@second_link[:url]}"}= @second_link[:text]
-        %a.mdl-navigation__link{:href => "#{@third_link[:url]}"}= @third_link[:text]
-        %a.mdl-navigation__link{:href => "#{@fourth_link[:url]}"}= @fourth_link[:text]
-    %main.mdl-layout__content
-      %article
-        %section#about-section
-          .about-section-card.mdl-card.mdl-shadow--2dp
-            .mdl-card__title
-              %h1.mdl-card__title-text CoderDojo って？
-            .mdl-card__supporting-text
-              .twitter-share-button-style
-                %a.twitter-share-button{"data-hashtags" => "CoderDojo岡南", "data-related" => "CoderDojo_Konan,CoderDojoJapan", "data-show-count" => "false", "data-text" => "CoderDojo 岡山 岡南 公式ホームページ", "data-url" => root_url, "data-via" => "CoderDojo_Konan", :href => "https://twitter.com/share?ref_src=twsrc%5Etfw"} Tweet
-              .fb-share-button.fb-share-button-style{"data-href" => root_url, "data-layout" => "button_count", "data-mobile-iframe" => "true", "data-size" => "small"}
-                %a.fb-xfbml-parse-ignore{:href => "https://www.facebook.com/sharer/sharer.php?u=#{root_url}=sdkpreparse", :target => "_blank"} シェア
-              %br/
-              %p
-                CoderDojo は7〜17歳の子どもを対象にした無料で参加できるプログラミング道場(サークル)です。
-                %br/
-                2011年にアイルランドで始まり、世界では70カ国・1,200の道場、日本では全国に84以上の道場があります。(2017/5/27現在)
-              %p
-                各地のCoderDojoは、それぞれの有志がボランティアで運営していて、
-                %br/
-                CoderDojoでは、Ninja同士（参加している子供をNinjaといいます。）で教えあったり、
-                %br/
-                わからないことがあれば、現役プログラマーを中心としたメンターさんに質問したりできます。
-              %p CoderDojo で学べる内容は道場ごとに異なります。例えば、次の内容を学べる道場があります。
-              %ul
-                %li Scratch, Hour of Code
-                %li HTML, CSS, JavaScript
-                %li PHP, Python, Ruby, Unity
-                %li Arduino, Raspberry Pi など
-              %p 道場ごとに内容も規模も違いますが、Ninjaの自主性を重視している姿勢は一緒です。
-            - unless next_event_url.nil?
-              .mdl-card__actions.mdl-card--borde.next-event-button
-                = link_to "次回の開催をCheck!", next_event_url, class: 'btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-js-ripple-effect', target: "_new"
-            - else
-              .mdl-card__actions.mdl-card--borde.next-event-button
-                = link_to "申し込みページは只今準備中です！", root_url, class: 'btn btn-disabled mdl-button mdl-js-button'
-        %section#language-section
-          .language-section-card.mdl-card.mdl-shadow--2dp
-            .mdl-card__title
-              %h1.mdl-card__title-text CoderDojo 岡山 岡南での主な言語・ツール
-            .mdl-card__supporting-text
-              .mdl-grid
-                .mdl-cell.mdl-cell--3-col.mdl-cell--8-col-tablet.language-section-card-cell
-                  %img{:alt => "Scratch Cat", :src => "#{asset_path "index/scratch-cat.png"}"}/
-                  %p
-                    %a{:href => "https://scratch.mit.edu/"} Scratch
-                .mdl-cell.mdl-cell--3-col.mdl-cell--8-col-tablet.language-section-card-cell
-                  %img{:alt => "Java Logo", :src => "#{asset_path "index/java-original.png"}"}/
-                  %p
-                    %a{:href => "https://www.java.com/ja/"} Java
-                .mdl-cell.mdl-cell--3-col.mdl-cell--8-col-tablet.language-section-card-cell
-                  %img{:alt => "Web系言語", :src => "#{asset_path "index/web-lang.png"}"}/
-                  %p
-                    %a HTML・CSS・JavaScript
-                .mdl-cell.mdl-cell--3-col.mdl-cell--8-col-tablet.language-section-card-cell
-                  %img{:alt => "Ruby (on Rails)", :src => "#{asset_path "index/ruby-original.png"}"}/
-                  %p
-                    %a{:href => "https://www.ruby-lang.org/ja/"} Ruby (on Rails)
-        %section#summary-section
-          .summary-section-card.mdl-card.mdl-shadow--2dp
-            .mdl-card__title
-              %h1.mdl-card__title-text CoderDojo 岡山 岡南 の 開催概要
-            .mdl-card__supporting-text
-              %p
-                %strong> 毎月 第三日曜日
-                に開催しています。
-              %p
-                %strong> 事前申し込み制
-                です。申し込みページよりお申し込みください。
-              %p PCは無料でレンタル可能ですが、事前申込で、定員があります。
-              %p 開始時刻の10分前には会場に到着しておいてください。
-              %p 水筒などをお持ちの方は、開催前に指定場所においてください。
-              %p
-                %strong また、水分補給などは、指定場所ですること！（精密機械を扱っているため。）（配線に注意！）
-        %section#partner-section
-          .partner-section-card.mdl-card.mdl-shadow--2dp
-            .mdl-card__title
-              %h1.mdl-card__title-text パートナー
-            .mdl-card__supporting-text
-              %h3 CoderDojo 岡山 岡南 は、これらのパートナー様のご支援によって成り立っております！
-              %ul.partner-list
-                %li.partner-list-item
-                  %img#sakura-internet-logo{:src => "#{asset_path "index/supporter/sakura-internet.png"}"}/
-                  .mdl-tooltip{"data-mdl-for" => "sakura-internet-logo"} 「さくらのクラウド」の無償提供
-                  %p SAKURA INTERNET INC. 様
-                %li.partner-list-item
-                  %img#esa-io-logo{:src => "#{asset_path "index/supporter/esa.png"}"}/
-                  .mdl-tooltip{"data-mdl-for" => "esa-io-logo"} ドキュメント共有サービスの提供
-                  %p ESA.IO 様
-                %li.partner-list-item
-                  %img#rimgate-logo{:src => "#{asset_path "index/supporter/non-logo.png"}"}/
-                  .mdl-tooltip{"data-mdl-for" => "rimgate-logo"} サーバー・ドメイン代などの支援
-                  %p リムゲイト株式会社 様
-        %section#contact-section
-          .contact-section-card.mdl-card.mdl-shadow--2dp
-            .mdl-card__title
-              %h1.mdl-card__title-text お問い合わせ
-            .mdl-card__supporting-text
-              #wufoo-mv590ug0y8dwt7
-                Fill out my
-                = succeed "." do
-                  %a{:href => "https://coderdojokonancontact.wufoo.com/forms/mv590ug0y8dwt7"} online form
-              #wuf-adv{:style => "font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;"}
-                There are tons of
-                %a{:href => "http://www.wufoo.com/features/"} Wufoo features
-                to help make your forms awesome.
-              %br/
-              :javascript
-                var mv590ug0y8dwt7;(function(d, t) {
-                                  var s = d.createElement(t), options = {
-                                  'userName':'coderdojokonancontact',
-                                  'formHash':'mv590ug0y8dwt7',
-                                  'autoResize':true,
-                                  'height':'560',
-                                  'async':true,
-                                  'host':'wufoo.com',
-                                  'header':'show',
-                                  'ssl':true};
-                                  s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
-                                  s.onload = s.onreadystatechange = function() {
-                                  var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-                                  try { mv590ug0y8dwt7 = new WufooForm();mv590ug0y8dwt7.initialize(options);mv590ug0y8dwt7.display(); } catch (e) {}};
-                                  var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-                                  })(document, 'script');
-              .sns-contact-block
-                .fb-page.fb-page-style{"data-adapt-container-width" => "true", "data-hide-cover" => "false", "data-href" => "https://www.facebook.com/Coderdojo.Konan/", "data-show-facepile" => "true", "data-small-header" => "false", "data-tabs" => "timeline"}
-                  %blockquote.fb-xfbml-parse-ignore{:cite => "https://www.facebook.com/Coderdojo.Konan/"}
-                    %a{:href => "https://www.facebook.com/Coderdojo.Konan/"} CoderDojo 岡山 岡南
-                .twitter-timeline-box
-                  %a.twitter-follow-button{"data-show-count" => "false", :href => "https://twitter.com/CoderDojo_Konan?ref_src=twsrc%5Etfw"} Follow @CoderDojo_Konan
-                  %a.twitter-timeline{"data-height" => "500", "data-theme" => "light", "data-width" => "340", :href => "https://twitter.com/coderdojo_konan?ref_src=twsrc%5Etfw"} Tweets by coderdojo_konan
-      %footer.mdl-mini-footer
-        .mdl-mini-footer__left-section
-          .mdl-logo
-            CoderDojo Konan Okayama Official Site
-          %ul.mdl-mini-footer__link-list
-            %li Copyright © 2018 CoderDojo Konan Okayama
-        .mdl-mini-footer__right-section
-          %button.mdl-mini-footer__social-btn
-            %a{:href => "https://twitter.com/coderdojo_konan", :target => "_blank", :title => "Twitter"}
-              %i.fa.fa-twitter
-          %button.mdl-mini-footer__social-btn
-            %a{:href => "http://facebook.com/Coderdojo.Konan/", :target => "_blank", :title => "Facebook"}
-              %i.fa.fa-facebook
-          %button.mdl-mini-footer__social-btn
-            %a{:href => "https://www.instagram.com/coderdojo_konan/", :target => "_blank", :title => "Instagram"}
-              %i.fa.fa-instagram
-          %button.mdl-mini-footer__social-btn
-            %a{:href => "https://github.com/CoderDojo-Konan-Okayama", :target => "_blank", :title => "Github"}
-              %i.fa.fa-github
+          %strong>"プロのCoder"
+          から
+          %strong>"アドバイス"
+          や
+          %strong>"刺激"
+          を受け、
+          %br/
+          %strong>"友達"
+          たちと交流しながら
+          %strong>"技術"を"磨き合い"
+          、
+          %br/
+          %strong>"未来を創るクリエイター"
+          になれ！
+
+        - unless next_event_url.nil?
+          = link_to "次回の開催をCheck!", next_event_url, class: 'btn btn-primary btn-xl js-scroll-trigger text-white', target: "_new"
+        - else
+          = link_to "申し込みページは只今準備中です！", "#{root_url}#page-top", class: 'btn btn-disabled btn-xl border border-primary js-scroll-trigger text-white'
+%section#about.bg-primary.p-5
+  .container
+    .row
+      .col-lg-8.mx-auto.text-center
+        %h2.section-heading.text-white What's the CoderDojo? - CoderDojo とは
+        %hr.light.my-4/
+        %p.mb-4.text-white
+          CoderDojo は7〜17歳の子どもを対象にした無料で参加できるプログラミング道場(サークル)です。
+          %br/
+          2011年にアイルランドで始まり、世界では70カ国・1,200以上の道場、
+          %br/
+          日本では全国に84以上の道場があります。(2017/5/27現在)
+        %p.mb-4.text-white
+          各地のCoderDojoは、それぞれの有志がボランティアで運営していて、
+          %br/
+          CoderDojoでは、Ninja同士（参加している子供をNinjaといいます。）で教えあったり、
+          %br/
+          わからないことがあれば、現役プログラマーを中心としたメンターさんに質問したりできます。
+        - unless next_event_url.nil?
+          = link_to "次回の開催をCheck!", next_event_url, class: 'btn btn-light btn-xl js-scroll-trigger', target: "_new"
+        - else
+          = link_to "申し込みページは只今準備中です！", "#{root_url}#page-top", class: 'btn btn-disabled border border-white btn-xl js-scroll-trigger text-white'
+%section#thinking-together.bg-dark.p-3
+  .container
+    .row
+      .col-lg-8.mx-auto.p-3.my-3
+        %img.img-fluid{:alt => "開催風景 1", :src => "#{asset_path "index/introduction-image/dojo-image-06.jpg"}"}/
+      .col-lg-8.mx-auto.my-3.text-center
+        %h2.section-heading Thinking together - 一緒になって考える
+        %hr.light.my-4/
+        %p.mb-4
+          CoderDojo 岡山 岡南 は、みんなが同じことをするのではなく、
+          %br/
+          それぞれのやりたいこと・作りたいものに対して、メンターが同じ目線で、
+          %br/
+          一緒になって考えてくれ、
+          %br/
+          そしてアドバイスしてくれる場所です。
+        %p.mb-4
+          そのため、特にカリキュラムや、課題などは無く、
+          %br/
+          各自がテキストを持ってきたり、作りたいものを作ったり、
+          %br/
+          %a{href: 'https://coderdojo.jp/kata/', target: '_new'} CoderDojo Kata
+          などに掲載されているテキストをやったりもしています。
+          %br/
+          とても自由な雰囲気で、そして楽しみながらやることに重点を置いているのです。
+%section#share-what-you-made.bg-white.p-3
+  .container
+    .row
+      .col-lg-8.mx-auto.p-3.my-3
+        %img.img-fluid{:alt => "開催風景 2", :src => "#{asset_path "index/introduction-image/dojo-image-07.png"}"}/
+      .col-lg-8.mx-auto.my-3.text-center
+        %h2.section-heading
+          Share what you made
+          %br - 作ったものを共有する
+        %hr.my-4/
+        %p.mb-4
+          CoderDojo では、必ず会の終わりに発表会があります。
+          %br/
+          そこでは、その日に作った作品や、学んだことなどを思う存分に発表することができます。
+          %br/
+          素晴らしい箇所には拍手や、「すごい！」などの声があがり、やる気が上がります。
+          %br/
+          また、直した方が良い箇所や、悩んでいる所についても、
+          %br/
+          メンターや他のNinjaが一緒に考えたりしてくれます。
+        %p.mb-4
+          もちろん、これは Ninja だけが楽しむのではありません。
+          %br/
+          参加しているメンターも、時には目を見張るような、
+          %br/
+          素晴らしいアイデアや工夫をした作品に出会う時があります。
+          %br/
+          そういう時は、データを持ち帰って研究するなど、メンター自身も楽しんでいるのです。
+        %p.mb-4
+          このように、Ninja - メンター と双方向で楽しめるのが、CoderDojo で、
+          %br/
+          メンターの楽しんでいる様子を見て、また Ninja も楽しむようになるのです。
+
+%section#learn-with-each-other.bg-dark.p-3
+  .container
+    .row
+      .col-lg-8.mx-auto.p-3.my-3
+        %img.img-fluid{:alt => "開催風景 3", :src => "#{asset_path "index/introduction-image/dojo-image-01.jpg"}"}/
+      .col-lg-8.mx-auto.my-3.text-center
+        %h2.section-heading
+          Learn with each other and co-polish
+          %br - 共に学び、共に磨く
+        %hr.my-4/
+        %p.mb-4
+          それぞれが違うことをやっているからと言って、
+          %br/
+          全くもって交流しないというわけではありません。
+        %p.mb-4
+          自分も、他人も、それぞれがお互いにきちんと尊重し、
+          %br/
+          同じことをやっているNinja同士、互いにそのやり方を教えあったり、
+          %br/
+          また別のことをやっていたとしても、そのNinjaに関心を持ち、
+          %br/
+          積極的に交流ができ、どんどん知見や関係を深め、広めることができる。
+        %p.mb-4
+          CoderDojo 岡山 岡南 運営一同 は、そういう場でありたいと願っております。
+        %p.mb-4
+          中には全くもって初対面だったのに、Dojoを通し、仲良くなったNinja達も居ます。
+          %br/
+          彼らは互いに切磋琢磨し、めきめきと上達してきているのです。
+%section#language.bg-white
+  .container
+    .row
+      .col-lg-12.text-center
+        %h2.section-heading CoderDojo 岡山 岡南 での主な言語
+        %h6.section-heading あくまで目安であって、他の言語でも大歓迎です！
+        %hr.my-4/
+  .container
+    .row
+      .col-lg-3.col-md-6.text-center
+        .service-box.mt-5.mx-auto
+          %img.mb-3.sr-icons.img-fluid{:alt => "Scratch Cat", :src => "#{asset_path "index/scratch-cat.png"}"}/
+          %h4.mb-3 Scratch
+      .col-lg-3.col-md-6.text-center
+        .service-box.mt-5.mx-auto
+          %img.mb-3.sr-icons.img-fluid{:alt => "Java Logo", :src => "#{asset_path "index/java-original.png"}"}/
+          %h4.mb-3 Java
+      .col-lg-3.col-md-6.text-center
+        .service-box.mt-5.mx-auto
+          %img.mb-3.sr-icons.img-fluid{:alt => "Web系言語", :src => "#{asset_path "index/web-lang.png"}"}/
+          %h4.mb-3 HTML/CSS/JavaScript
+      .col-lg-3.col-md-6.text-center
+        .service-box.mt-5.mx-auto
+          %img.mb-3.sr-icons.img-fluid{:alt => "Ruby (on Rails)", :src => "#{asset_path "index/ruby-original.png"}"}/
+          %h4.mb-3 Ruby(on Rails)
+%section#supporters.bg-dark
+  .container
+    .row
+      .col-lg-12.text-center
+        %h2.section-heading Supporters
+        %h6.section-heading.text-fade CoderDojo 岡山 岡南 の活動はこれらのサポータの皆様によって成り立っています！
+        %hr.my-4/
+  .container
+    .row
+      .col-lg-3.col-md-6.text-center.mx-auto
+        .service-box.mt-5.mx-auto
+          %img.mb-3.sr-icons.img-fluid{:alt => "Non Logo", :src => "#{asset_path "index/supporter/non-logo.png"}"}(data-toggle="tooltip" data-placement="top" title="サーバー・ドメインなどの提供")/
+          %h4.mb-3 リムゲイト株式会社 様
+      .col-lg-3.col-md-6.text-center.mx-auto
+        .service-box.mt-5.mx-auto
+          %img.mb-3.sr-icons.img-fluid{:alt => "ESA", :src => "#{asset_path "index/supporter/esa.png"}"}(data-toggle="tooltip" data-placement="top" title="ドキュメント共有サービスの提供")/
+          %h4.mb-3 ESA.IO 様
+      .col-lg-3.col-md-6.text-center.mx-auto
+        .service-box.mt-5.mx-auto
+          %img.mb-3.sr-icons.img-fluid{:alt => "さくらインターネット", :src => "#{asset_path "index/supporter/sakura-internet.png"}"}(data-toggle="tooltip" data-placement="top" title="「さくらのクラウド」の無償提供")/
+          %h4.mb-3 SAKURA INTERNET INC. 様
+%section#contact
+  .container
+    .row
+      .col-lg-8.mx-auto.text-center
+        %h2.section-heading
+          %i.fa.fa-envelope-o.sr-contact.mx-3
+          Contact us
+        %hr.my-4/
+        %p.mb-5 何か気になることがございましたら、お気軽にお問い合わせください！
+    .row
+      .col-lg-8.mx-auto.mw-100
+        = render 'form'
+    .row
+      .col-lg-4.mx-auto.my-3.p-2.mw-100
+        .fb-page.fb-page-style{"data-adapt-container-width" => "true", "data-hide-cover" => "false", "data-href" => "https://www.facebook.com/Coderdojo.Konan/", "data-show-facepile" => "true", "data-small-header" => "false", "data-tabs" => "timeline"}
+          %blockquote.fb-xfbml-parse-ignore{:cite => "https://www.facebook.com/Coderdojo.Konan/"}
+            %a{:href => "https://www.facebook.com/Coderdojo.Konan/"} CoderDojo 岡山 岡南
+      .col-lg-4.mx-auto.my-3.p-2.mw-100
+        .twitter-timeline-box
+          %a.twitter-follow-button{"data-show-count" => "false", :href => "https://twitter.com/CoderDojo_Konan?ref_src=twsrc%5Etfw"} Follow @CoderDojo_Konan
+          %a.twitter-timeline{"data-height" => "500", "data-theme" => "light", "data-width" => "340", :href => "https://twitter.com/coderdojo_konan?ref_src=twsrc%5Etfw"} Tweets by coderdojo_konan

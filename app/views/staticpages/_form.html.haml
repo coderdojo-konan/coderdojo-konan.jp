@@ -1,0 +1,9 @@
+= simple_form_for @contact_form, :html => { :class => 'form-horizontal' }, :url => { :action => 'contact_form_send'} do |f|
+  = f.input :name, as: :string, placeholder: 'お名前', error: 'この項目は空白にできません。', label: false
+  = f.input :email, as: :string, placeholder: 'メールアドレス', error: 'この項目は空白にできません。', label: false
+  = f.input :subject, as: :string, placeholder: '件名', error: 'この項目は空白にできません。', label: false
+  = f.input :body, as: :text, placeholder: '本文を入力してください。', :input_html => { :rows => 5 }, label: false,
+    error: 'この項目は空白にできません。'
+  = f.input :agreement_privacy_policy, as: :boolean, checked: false, error: '個人情報保護方針へのご同意をお願いします。',
+    label: link_to('個人情報保護方針', "#{root_url}privacy-policy", target: "_blank") + " に同意する。"
+  = f.submit '送信', :class => 'btn btn-primary'

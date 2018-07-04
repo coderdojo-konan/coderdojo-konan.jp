@@ -1,128 +1,28 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-.pages-layout {
-    .pages-layout__header {
-    	background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), image-url('coderdojo-konan-header-image-1.jpg');
-    	background-size: cover;
-    	background-position: center;
-        .mdl-layout__header-row {
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-    }
-    article {
-        margin: 0.5rem;
-        #pages-section {
-          padding: 0.8rem;
-          .pages-section-card {
-            width: 100%;
-            height: 100%;
-            padding: 0.5rem;
-          }
-        }
-        .pages-section {
-          padding: 0.8rem;
-          .pages-section-card {
-            width: 100%;
-            height: 100%;
-            padding: 0.5rem;
-          }
-        }
-    }
-    .mdl-layout__content {
-        #pages-section {
-            .docs-list {
-                ul {
-                    font-size: 1.3rem;
-                }
-            }
-        }
-        .pages-contents {
-            h1 {
-                font-size: 2.0rem;
-                color: black;
-                line-height: 2.2rem;
-            }
-            h2 {
-                font-size: 1.75rem;
-                color: black;
-                line-height: 1.8rem;
-            }
-            h3 {
-                font-size: 1.65rem;
-                color: black;
-                line-height: 1.7rem;
-            }
-            h4 {
-                font-size: 1.5rem;
-                line-height: 1.6rem;
-                color: black;
-            }
-            p {
-                font-size: 1rem;
-            }
-            .pages-col {
-                display: inline-block;
-                vertical-align: middle;
-                margin: 1rem;
-            }
-            
-            .ninjas-works-video {
-                iframe {
-                    width: 400px;
-                    height: 300px;
-                }
-            }
+// // Place all the styles related to the pages controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: http://sass-lang.com/
 
-            .ninjas-works-impressions {
-                background: aliceblue;
-                -webkit-box-shadow: 2px 2px 0px 0px #777;
-                -moz-box-shadow: 2px 2px 0px 0px #777;
-                box-shadow: 2px 2px 0px 0px #777;
-                border-radius: 10px;
-                p {
-                    color: black;
-                }
-                .ninjas-works-container {
-                    padding: 0.3rem;
-                    width: 100%;
-                    height: 100%;
-                    .pages-col {
-                        display: inline-block;
-                        padding: 0.3rem;
-                        margin: 0.5rem;
-                        margin-top: 1rem;
-                        h4 {
-                            margin-top: 0;
-                            margin-bottom: 0;
-                            line-height: 1.5rem;
-                        }
-                    }
-                    img {
-                        margin: auto;
-                        border-radius: 50%;
-                        width: 5rem;
-                        height: 5rem;
-                    }
-                    .ninjas-icon {
-                        p {
-                            text-align: center;
-                            margin: 0.1rem;
-                        }
-                    }
-                }
-            }
-        .twitter-share-button-style {
-            vertical-align: top;
-            display: inline-block;
-            margin: 0.5rem;
-        }
-        .fb-share-button-style {
-            vertical-align: top;
-            display: inline-block;
-            margin: 0.5rem;
-          }
-        }
-    }
+#page-content {
+  .page-title {
+    border-bottom: 0.3rem dotted $primary;
+  }
+  hr {
+    max-width: 100%;
+    border-width: 100%;
+    border-color: $primary;
+    margin-bottom: 1.3rem;
+  }
+  h2 {
+    margin-top: 1.5rem;
+  }
+  h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  table {
+    @extend .table;
+    @extend .table-striped;
+    @extend .table-bordered;
+  }
 }

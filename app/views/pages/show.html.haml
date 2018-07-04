@@ -1,4 +1,9 @@
 - provide(:title, @page.title)
 - provide(:desc, @page.description)
 - provide(:url, request.url)
-= raw @content
+
+.headings.page-title.m-2.p-2
+  %h1= @page.title
+  %p= @page.description
+.content.m-3.p-2
+  = raw @content
