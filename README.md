@@ -1,4 +1,4 @@
-# [CoderDojo 岡山 岡南 公式ホームページ (テスト公開中)](https://coderdojo-konan-jp-rails.herokuapp.com/)
+# CoderDojo 岡山 岡南 公式ホームページ [(テスト公開中)](https://coderdojo-konan-jp-rails.herokuapp.com/)
 
 [![Build Status](https://travis-ci.org/CoderDojo-Konan-Okayama/coderdojo-konan.jp.svg?branch=master)](https://travis-ci.org/CoderDojo-Konan-Okayama/coderdojo-konan.jp)
 [![Maintainability](https://api.codeclimate.com/v1/badges/5dc68bf422fb19f6c628/maintainability)](https://codeclimate.com/github/CoderDojo-Konan-Okayama/coderdojo-konan.jp/maintainability)
@@ -23,7 +23,7 @@ Contributor を大々的？に募っておきながら仕様とかもなにも�
 
 ### 全体的な仕様
 
-- デザインは、表側が MDL（マテリアルデザイン・ライト）、ダッシュボードが、AdminLTE を使用。
+- ~~デザインは、表側が MDL（マテリアルデザイン・ライト）、ダッシュボードが、AdminLTE を使用。~~ 現在 future/update-desgin-to-own--front ブランチにて、 Bootstrap4 を使用して独自デザインを使おうとしてます。フロントだけでなく、バックもそうする予定。
 - Ruby on Rails + RSpec
 - 公開環境はいまのところ Heroku
 - Heroku のためProduction環境のデータベースは PostgreSQL
@@ -37,11 +37,15 @@ coderdojo-japan/coderdojo.jp
 
 db/pages 配下のMDファイルをそのまま変換し、比較的軽いページの生成をします。
 
+WP で言う所の **固定ページ** 的感覚です。
+
 ### StaticPages, 静的ページ
 
-HAML直書き... そのまま表示です。
+HAML直書き... そのまま表示です。（ヘッダー・フッターのぞく。）
 
 デザインが変則的な場合に使います。（例： Topページ、作品紹介ページなど）
+
+WP で言う所の **固定ページ** 的感覚で、なおかつ複雑なデザインがいい場合に使う。
 
 ### Posts Model, ブログ記事
 
@@ -56,6 +60,8 @@ MDを使いますが、今後 TinyMCE みたいなのを導入するかもしれ
 - 限定公開（予定）
 
 まだまだ一部を作っていってる途中で、後々もうちょっと追加したいと思っている機能もあります。
+
+WP で言う所の **投稿**　ですね、ストレート。
 
 ## Want to...
 
