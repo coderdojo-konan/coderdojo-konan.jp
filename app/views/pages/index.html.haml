@@ -1,7 +1,10 @@
 - provide(:title, @title)
 - provide(:desc, 'このサイトのページ一覧です。特別なページなどは含まれていない場合もあります。')
 - provide(:url, request.url)
-.docs-list
-  %ul
+
+%h1.page-title.m-3.p-2= @title
+
+.docs-list.m-3.p-2
+  %ul.list-group
     - @pages.each do |page|
-      %li= link_to page.title, page.url
+      %li.list-group-item= link_to page.title, page.url
