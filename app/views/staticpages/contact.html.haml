@@ -1,0 +1,14 @@
+%section#contact
+  .container
+    .row
+      .col-lg-8.mx-auto.text-center
+        %h2.section-heading
+          %i.fa.fa-envelope-o.sr-contact.mx-3
+          Contact us
+        %hr.my-4/
+        %p.mb-5 何か気になることがございましたら、お気軽にお問い合わせください！
+    .row
+      .col-lg-8.mx-auto.mw-100
+        = render 'form'
+        %br/
+        = link_to 'トップページへ戻る', root_url

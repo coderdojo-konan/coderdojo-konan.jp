@@ -1,0 +1,13 @@
+- flash.each do |key, value|
+  #info{style: "display:none" }
+    = content_tag(:p, value, class: "#{key}")
+%nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top
+  .container-fluid
+    %a.navbar-brand.js-scroll-trigger{:href => "#{root_url}#page-top"}
+    %button.navbar-toggler.navbar-toggler-right{"aria-controls" => "navbarResponsive", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarResponsive", "data-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
+    #navbarResponsive.collapse.navbar-collapse
+      %ul.navbar-nav.ml-auto
+        - @header_links.each do |header_links|
+          %li.nav-item
+            = link_to header_links[:text], header_links[:url], { :class => "nav-link js-scroll-trigger" }

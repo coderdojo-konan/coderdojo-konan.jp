@@ -29,11 +29,11 @@ class Page
   end
 
   def description
-    @desc  ||= exists? ? self.content.lines.reject{|l| l =~ /^(\n|<)/ }.second.delete('<br>').strip : ''
+    @desc  ||= exists? ? self.content.match(/\[desc:(.+)\]/)[1] : ''
   end
 
   def title
-    @title ||= exists? ? self.content.lines.first[2..-1].strip.gsub('<br>', '') : ''
+    @title ||= exists? ? self.content.match(/\[title:(.+)\]/)[1] : ''
   end
 
   def content

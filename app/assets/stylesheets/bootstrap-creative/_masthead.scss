@@ -1,0 +1,63 @@
+
+// Styling for the masthead
+header.masthead {
+  color: snow;
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 56px);
+  background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), image-url('coderdojo-konan-header-image-1.jpg');
+  background-position: center center;
+  @include background-cover;
+  hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  h1 {
+    font-size: 2rem;
+    font-style: italic;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.8);
+  }
+  p {
+    font-size: 1.3rem;
+    color: $p_color;
+    font-style: italic;
+    border-bottom: 0.3rem dotted $primary;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.3);
+    strong {
+      font-size: 120%;
+      color: $p_color;
+      text-shadow: 1px 1px 0 rgba(0,0,0,.5);
+    }
+  }
+  @media (min-width: 768px) {
+    p {
+      font-size: 1.3rem;
+      color: $p_color;
+      font-style: italic;
+      border-bottom: 0.3rem dotted $primary;
+      text-shadow: 1px 1px 0 rgba(0,0,0,.3);
+      strong {
+        font-size: 120%;
+        color: $p_color;
+        text-shadow: 1px 1px 0 rgba(0,0,0,.5);
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    height: 100vh;
+    min-height: 650px;
+    padding-top: 0;
+    padding-bottom: 0;
+    h1 {
+      font-size: 3rem;
+      font-style: italic;
+      text-shadow: 1px 1px 0 rgba(0,0,0,.8);
+    }
+  }
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 4rem;
+      font-style: italic;
+      text-shadow: 1px 1px 0 rgba(0,0,0,.8);
+    }
+  }
+}
