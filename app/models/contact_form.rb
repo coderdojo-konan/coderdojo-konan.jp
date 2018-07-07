@@ -21,7 +21,7 @@ class ContactForm
       @subject = self.subject
       @body = self.body
 
-      bodyAttachments = {"title":"メンターお問いあわせ",
+      bodyAttachments = {"title": "メンターお問いあわせ",
                           "text": "\n\n\n*Email* :\n" + @email +
                           "\n\n*お名前* :\n" + @name +
                           "\n\n*件名* :\n" + @subject +
@@ -30,10 +30,14 @@ class ContactForm
 
       massage_body = "<!channel> お問い合わせフォームより新しい通知が来ています！ \n"
 
-      hooks_url = ENV['SLACK_INCOMING_WEBHOOKS_URL']
-      notifier = Slack::Notifier.new hooks_url, channel: "#各種お問い合わせボード"
-      notifier.post attachments: [bodyAttachments], text: massage_body
+      slack_notifer_client.post attachments: [bodyAttachments], text: massage_body
       true
     end
+  end
+  
+  private
+  def slack_notifer_client
+    hooks_url = ENV['SLACK_INCOMING_WEBHOOKS_URL']
+    Slack::Notifier.new hooks_url, channel: "#各種お問い合わせボード"
   end
 end
