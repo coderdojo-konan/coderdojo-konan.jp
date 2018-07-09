@@ -10,23 +10,19 @@ RSpec.describe PagesController, type: :controller do
   end
 
   describe "Request GET #show" do
-    it "@content が表示されること" do
-      param    = 'visit-interview'
-      get :show, params: {:id => param}
-      page      = Page.new(param)
-      expected = MarkdownHelper.md_to_html page.content
-      expect(assigns(:content)).to eq expected
+    context "ファイル名が存在する時" do
+      it "@content が表示されること" do
+        param    = 'visit-interview'
+        get :show, params: {:id => param}
+        page      = Page.new(param)
+        expected = MarkdownHelper.md_to_html page.content
+        expect(assigns(:content)).to eq expected
+      end
     end
 
-    context "ファイル名が存在する時" do
-      before do
-        get :show, params: {:id => 'not_found_hoge_hoge'}
-      end
-      it 'redirect status が 404 であること' do
-        expect(response.status).to eq 404
-      end
-      it 'not_found_404.html.erb が表示されること' do
-        expect(response).to render_template(:not_found_404)
+    context "ファイル名が存在しない時" do
+      it '404 エラーが返される こと' do
+        expect { get :show, params: {:id => 'not_found_hoge_hoge'} }.to raise_error(ActionController::RoutingError)
       end
     end
   end
