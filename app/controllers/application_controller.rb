@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
         { url: "#{root_url}regulation", text: "会則" },
         { url:  "#{root_url}visit-interview", text: "見学・取材について" },
         { url:  "#{root_url}f-and-q", text: "よくある質問 (F&Q)"},
-        { url: "#{root_url}privacy-policy", text: "Privacy Policy（個人情報保護方針）"}
+        { url: "#{root_url}privacy-policy", text: "Privacy & Policy（個人情報保護方針）"}
       ]
     end
 end
