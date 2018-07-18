@@ -2,9 +2,6 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-document.addEventListener 'turbolinks:load', ->
-  componentHandler.upgradeDom()
-
 # ((d, s, id) ->
 #   js = undefined
 #   fjs = d.getElementsByTagName(s)[0]

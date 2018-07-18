@@ -353,6 +353,7 @@ DEPENDENCIES
   simplecov
   slack-notifier
   spring
+  sprockets-rails
   sqlite3
   timecop
   toastr-rails

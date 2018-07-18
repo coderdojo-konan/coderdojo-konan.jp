@@ -13,7 +13,10 @@
 //= require jquery
 //= require rails-ujs
 //= require turbolinks
-//= require bootstrap
-//= require_tree .
-//= require toastr
 //= require popper
+//= require bootstrap
+//= require scrollreveal.min.js
+//= require toastr
+//= require jquery.magnific-popup.min.js
+
+//= require_tree .
