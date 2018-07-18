@@ -56,6 +56,11 @@ GEM
       autoprefixer-rails (>= 6.0.3)
       popper_js (>= 1.12.9, < 2)
       sass (>= 3.5.2)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
+    bootstrap3-datetimepicker-rails (4.17.47)
+      momentjs-rails (>= 2.8.1)
     builder (3.2.3)
     byebug (10.0.2)
     codeclimate-test-reporter (1.0.8)
@@ -328,6 +333,8 @@ DEPENDENCIES
   bcrypt (= 3.1.11)
   bootsnap
   bootstrap (~> 4.1.1)
+  bootstrap-sass
+  bootstrap3-datetimepicker-rails (~> 4.17.47)
   byebug
   codeclimate-test-reporter (~> 1.0.0)
   coffee-rails (~> 4.2.1)
