@@ -42,6 +42,8 @@ gem 'slack-notifier'
 
 gem 'toastr-rails'
 
+gem 'friendly_id'
+
 gem 'rails_12factor', group: :production
 
 group :development, :test do
