@@ -1,0 +1,37 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title
+      = yield(:title)
+      | CoderDojo Konan Okayama
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    = favicon_link_tag
+    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
+    %meta{:content => "summary", :name => "twitter:card"}/
+    %meta{:content => "@coderdojo_konan", :name => "twitter:site"}/
+    %meta{:content => "#{full_title(yield(:title))}", :name => "twitter:title"}/
+    %meta{:content => "#{yield(:desc)}", :name => "twitter:description"}/
+    %meta{:content => "#{full_title(yield(:title))}", :property => "og:title"}/
+    %meta{:content => "http://#{request.host}#{request.fullpath}", :property => "og:url"}/
+    %meta{:content => "#{yield(:desc)}", :property => "og:description"}/
+    %meta{:content => "CoderDojo Konan Okayama Official Site", :property => "og:site_name"}/
+    %meta{:content => "#{root_url}og-coderdojo-konan-image.jpg", :property => "og:image"}/
+    %meta{:content => "website", :property => "og:type"}/
+    %meta{:content => "1974108302904511", :property => "fb:app_id"}/
+    %meta{:coderdojo => "1881439892127060", :property => "fb:pages"}/
+    %meta{:content => "CoderDojo 岡山 岡南", :name => "author"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic", :rel => "stylesheet", :type => "text/css"}/
+
+  %body#page-top
+    = render 'header'
+    %article
+      %section#page-content
+        .container
+          .row
+            .col-lg-12.mx-auto.my-3
+              = yield
+    = render 'footer'
