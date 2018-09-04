@@ -3,12 +3,9 @@
   = f.error_notification
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
 
-  .form-inputs
-    = f.input :body
-    = f.input :title
-    = f.input :published_at
-    = f.input :author_id
-    = f.input :slug
-
-  .form-actions
-    = f.button :submit
+  = f.input :title
+  = f.input :slug
+  = f.input :published_at
+  = f.input :body, as: :text, input_html: { :rows => '20' }
+  = f.input :author_id
+  = f.button :submit
