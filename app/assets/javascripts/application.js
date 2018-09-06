@@ -18,5 +18,6 @@
 //= require scrollreveal.min.js
 //= require toastr
 //= require jquery.magnific-popup.min.js
+//= require js.cookie
 
 //= require_tree .
