@@ -1,0 +1,12 @@
+footer {
+  .footer-social{
+    .footer-social-icons {
+      a {
+        @include transition-all;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
