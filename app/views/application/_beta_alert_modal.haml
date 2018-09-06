@@ -1,0 +1,28 @@
+.modal{:role => "dialog", :tabindex => "-1", :id => "beta-alert-modal" }
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header
+        %h5.modal-title 〜 お知らせ 〜
+        %button.close{"aria-label" => "閉じる", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+      .modal-body
+        %p
+          このサイトは、まだテスト公開中の段階です。
+          %br
+          十分注意はしていますが、予期しないバグなどが発生する場合があります。
+        %p
+          また、このサイトは人間と同じく、 6時間以上睡眠を取らないと動かなくなるようになっています。
+          %br
+          そのため、以下の時間帯は、このサイトにアクセスすることはできなくしています。
+        %ul
+          %li 1:00 AM ~ 7:00 AM
+
+        %p ご迷惑を色々とおかけしますが、よろしくお願いします。
+
+        %p
+          なお、旧サイトは
+          = link_to 'こちら', 'https://www.coderdojo.jp/'
+          です。
+
+      .modal-footer
+        %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} 閉じる
