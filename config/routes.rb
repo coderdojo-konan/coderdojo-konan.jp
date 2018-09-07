@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/pages' => 'pages#index'
   get '/next-event-is-still-planned' => 'staticpages#next_event_is_still_planned'
   get '/ninjas-works' => 'staticpages#ninjas_works'
+  get ".well-known/acme-challenge/:id" => "staticpages#letsencrypt"
 
   resources :pages, only: [:show], :path => '/'
 
