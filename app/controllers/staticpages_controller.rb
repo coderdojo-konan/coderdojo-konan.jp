@@ -26,12 +26,6 @@ class StaticpagesController < ApplicationController
     end
 
   end
-  def letsencrypt
-    if params[:id] == ENV["LETSENCRYPT_REQUEST"]
-      res = ENV["LETSENCRYPT_RESPONSE"]
-      render plain: res
-    end
-  end
 
   private
     def contact_form_params
