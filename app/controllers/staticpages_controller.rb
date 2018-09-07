@@ -28,7 +28,8 @@ class StaticpagesController < ApplicationController
   end
   def letsencrypt
     if params[:id] == ENV["LETSENCRYPT_REQUEST"]
-      render text: ENV["LETSENCRYPT_RESPONSE"]
+      res = ENV["LETSENCRYPT_RESPONSE"]
+      render plain: res
     end
   end
 
