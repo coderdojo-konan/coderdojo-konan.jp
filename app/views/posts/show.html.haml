@@ -1,18 +1,18 @@
 - provide(:title, @post.title)
 - provide(:url, request.url)
 
-%p
-  %b Body:
-  = markdown(@post.body).html_safe
-%p
-  %b Title:
-  = @post.title
-%p
-  %b Published at:
-  = @post.published_at
-%p
-  %b Author:
-  = @post.author_id
-%p
-  %b Slug:
-  = @post.slug
+.container
+  .row
+    .col-lg-10.mx-auto.my-3
+      .row
+        .col-lg-12.headings.page-title.m-2.p-2
+          %h1= @post.title
+        .col-lg-4.date-text
+          %p.text-muted
+            投稿日:
+            = @post.published_at
+        .col-lg-8.sns-share-container.d-flex.justify-content-right.align-items-right
+          = social_share_button_tag(@post.title)
+
+      .content.m-3.p-2
+        = raw markdown @post.body

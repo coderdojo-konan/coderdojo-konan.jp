@@ -19,4 +19,7 @@
 //= require toastr
 //= require jquery.magnific-popup.min.js
 //= require moment
+//= require social-share-button
+//= require social-share-button/wechat
+//= require js.cookie
 //= require_tree .
