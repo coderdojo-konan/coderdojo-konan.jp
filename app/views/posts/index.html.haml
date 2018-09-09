@@ -15,9 +15,6 @@
                     Published: #{post.published_at}
                 %h4.card-title= post.title
                 %hr/
-                %p.card-text= truncate(md_to_html(post.body), length: 80)
+                %p.card-text= truncate(markdown(post.body), length: 80)
                 %button.btn.btn-primary
                   %p More
-                  = fa_icon 'caret-square-right'
-
-      = link_to 'New Post', new_post_path

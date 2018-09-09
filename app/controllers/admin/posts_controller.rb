@@ -1,15 +1,10 @@
-class PostsController < ApplicationController
-  before_action :set_post, only: [:show]
+class Admin::PostsController < Admin::Base
+  before_action :set_post, only: [:edit, :update, :destroy]
 
   # GET /posts
   # GET /posts.json
   def index
     @posts = Post.all
-  end
-
-  # GET /posts/1
-  # GET /posts/1.json
-  def show
   end
 
   # GET /posts/new
@@ -56,7 +51,7 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      format.html { redirect_to admin_posts_url, notice: 'Post was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

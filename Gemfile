@@ -22,7 +22,9 @@ gem 'travis'
 
 gem 'haml-rails'
 
-gem 'font-awesome-sass', '~> 5.5.0'
+# gem 'kramdown', '~> 1.1.0'
+
+gem 'font-awesome-sass'
 
 gem 'bcrypt'
 
@@ -45,6 +47,8 @@ gem 'toastr-rails'
 gem 'friendly_id'
 
 gem 'momentjs-rails'
+
+gem 'chart-js-rails'
 
 gem 'rails_12factor', group: :production
 

@@ -3,7 +3,7 @@
 
 %p
   %b Body:
-  = markdown(@post.body)
+  = md_to_html(@post.body)
 %p
   %b Title:
   = @post.title

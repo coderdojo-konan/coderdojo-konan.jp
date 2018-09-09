@@ -1,20 +1,18 @@
 module MarkdownHelper
-  def md_to_html(md_text)
+  def markdown(text)
+    html_render = Redcarpet::Render::HTML.new(filter_html: true, hard_wrap: true)
     options = {
-      space_after_headers: true
+        autolink: true,
+        space_after_headers: true,
+        no_intra_emphasis: true,
+        fenced_code_blocks: true,
+        tables: true,
+        hard_wrap: true,
+        xhtml: true,
+        lax_html_blocks: true,
+        strikethrough: true
     }
-
-    extensions = {
-      autolink:           true,
-      no_intra_emphasis:  true,
-      fenced_code_blocks: true,
-      tables: true
-    }
-    unless @markdown
-      renderer = Redcarpet::Render::OriginalHTML.new(options)
-      @markdown = Redcarpet::Markdown.new(renderer, extensions)
-    end
-
-    @markdown.render(md_text).html_safe
+    markdown = Redcarpet::Markdown.new(html_render, options)
+    markdown.render(text)
   end
 end

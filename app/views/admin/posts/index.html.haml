@@ -1,0 +1,34 @@
+- provide(:title, '投稿一覧')
+- provide(:desc, 'このサイトの投稿一覧です。')
+- provide(:url, request.url)
+- provide(:card_title, '投稿一覧')
+
+.table-responsive
+  %table#dataTable.table.table-bordered{:cellspacing => "0", :width => "100%"}
+    %thead
+      %tr
+        %th{:scope => "col"} #
+        %th{:scope => "col"} Title
+        %th{:scope => "col"} Body
+        %th{:scope => "col"} Published at
+        %th{:scope => "col"} Path
+        %th{:scope => "col"} Auther
+        %th
+        %th
+        %th
+    %tbody
+      - @posts.each do |post|
+        %tr
+          %th{:scope => "row"}= post.id
+          %td= post.title
+          %td= truncate(strip_tags(markdown(post.body)), length: 80)
+          %td= post.published_at
+          %td= post.slug
+          %td= post.author_id
+          %td= link_to 'Show', post, :target=>["_new"]
+          %td= link_to 'Edit', edit_admin_post_path(post)
+          %td= link_to 'Destroy', [:admin, post], method: :delete, data: { confirm: 'Are you sure?' }
+
+
+      -#
+      -# = link_to 'New Post', new_admin_post_path
