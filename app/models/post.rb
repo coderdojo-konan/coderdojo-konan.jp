@@ -2,6 +2,12 @@ class Post < ApplicationRecord
   extend FriendlyId
   friendly_id :slug, use: :slugged
 
+  validates :title, presence: true
+  validates :published_at, presence: true
+  validates :slug, presence: true
+  validates :body, presence: true
+
+
   scope :published, -> { where("published_at IS NOT NULL").where("published_at <= ?", Time.now) }
   scope :draft, -> { where("published_at IS NULL OR published_at > ?", Time.now) }
 
