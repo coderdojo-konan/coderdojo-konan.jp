@@ -12,7 +12,7 @@ class PagesController < ApplicationController
     unless @page.exists?
       raise ActionController::RoutingError.new(params[:path])
     end
-    @content = MarkdownHelper.md_to_html @page.content
+    @content = markdown @page.content
     @url = request.url
   end
 end
