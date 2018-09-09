@@ -28,10 +28,9 @@
 
   %body#page-top
     = render 'header'
+
     %article
       %section#page-content
-        .container
-          .row
-            .col-lg-12.mx-auto.my-3
-              = yield
+        = yield
+        
     = render 'footer'

@@ -2,32 +2,22 @@
 - provide(:desc, 'このサイトの投稿一覧です。')
 - provide(:url, request.url)
 
-%h1 Listing posts
+.container
+  .row
+    .col-lg-12.mx-auto.my-3
+      .card-columns
+        - @posts.each do |post|
+          = link_to post do
+            .card.border.bg-white.border-light.text-center.my-4
+              .card-body
+                .card-date-text.text-left
+                  %p.text-muted.font-italic
+                    Published: #{post.published_at}
+                %h4.card-title= post.title
+                %hr/
+                %p.card-text= truncate(md_to_html(post.body), length: 80)
+                %button.btn.btn-primary
+                  %p More
+                  = fa_icon 'caret-square-right'
 
-%table
-  %thead
-    %tr
-      %th Body
-      %th Title
-      %th Published at
-      %th Author
-      %th Slug
-      %th
-      %th
-      %th
-
-  %tbody
-    - @posts.each do |post|
-      %tr
-        %td= post.body
-        %td= post.title
-        %td= post.published_at
-        %td= post.author_id
-        %td= post.slug
-        %td= link_to 'Show', post
-        %td= link_to 'Edit', edit_post_path(post)
-        %td= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Post', new_post_path
+      = link_to 'New Post', new_post_path

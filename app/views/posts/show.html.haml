@@ -1,12 +1,9 @@
 - provide(:title, @post.title)
-- provide(:desc, @post.description)
 - provide(:url, request.url)
-
-%p#notice= notice
 
 %p
   %b Body:
-  = @post.body
+  = md_to_html(@post.body)
 %p
   %b Title:
   = @post.title
