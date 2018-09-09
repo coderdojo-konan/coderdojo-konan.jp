@@ -3,6 +3,9 @@
 - provide(:url, request.url)
 - provide(:card_title, '投稿一覧')
 
+.new-btn-wrapper.text-right
+  = link_to 'New Post', new_admin_post_path, class: "btn btn-outline-primary mx-2 my-2 "
+
 .table-responsive
   %table#dataTable.table.table-bordered{:cellspacing => "0", :width => "100%"}
     %thead
@@ -28,7 +31,3 @@
           %td= link_to 'Show', post, :target=>["_new"]
           %td= link_to 'Edit', edit_admin_post_path(post)
           %td= link_to 'Destroy', [:admin, post], method: :delete, data: { confirm: 'Are you sure?' }
-
-
-      -#
-      -# = link_to 'New Post', new_admin_post_path
