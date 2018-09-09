@@ -3,7 +3,7 @@
 
 %p
   %b Body:
-  = markdown(@post.body)
+  = markdown(@post.body).html_safe
 %p
   %b Title:
   = @post.title
