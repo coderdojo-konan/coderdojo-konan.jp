@@ -26,6 +26,7 @@ class Admin::PostsController < Admin::Base
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
+        flash.now[:alert] = 'An error happened in the post. Please try again.'
         format.html { render :new }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
