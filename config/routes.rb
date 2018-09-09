@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  resources :posts
+  resources :posts, only: [:show, :index]
 
   namespace :admin do
-    resources :posts, only: [:new, :edit, :update, :destroy, :index]
+    resources :posts, except: [:show]
   end
 
   root 'staticpages#index'
