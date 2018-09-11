@@ -5,6 +5,9 @@
   background-color: $gray-100 !important;
 }
 #contact {
+  &.bg-dark{
+    background-color: $gray-100 !important;
+  }
   .twitter-timeline-box {
     display: inline-block;
     position: relative;
@@ -14,6 +17,6 @@
     vertical-align: top;
   }
 }
-#supporters.bg-dark{
+#language.bg-dark{
   background-color: $gray-100 !important;
 }
