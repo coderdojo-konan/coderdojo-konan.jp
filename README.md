@@ -13,17 +13,15 @@
 
 ## 各機能・仕様
 
-Contributor を大々的？に募っておきながら仕様とかもなにも書かないというのはいけないので、
-
 これから先の予定も含めて思い出せる範囲で書いておきます。
 
 ### 全体的な仕様
 
-- ~~デザインは、表側が MDL（マテリアルデザイン・ライト）、ダッシュボードが、AdminLTE を使用。~~ 現在 future/update-desgin-to-own--front ブランチにて、 Bootstrap4 を使用して独自デザインを使おうとしてます。フロントだけでなく、バックもそうする予定。
+- Bootstrap 4 を使用
 - Ruby on Rails + RSpec
 - 公開環境はいまのところ Heroku
-- Heroku のためProduction環境のデータベースは PostgreSQL
-- Develop 環境のデータベースは SQLite
+- Heroku のため Production 環境のデータベースは PostgreSQL
+- Develop 環境のデータベースも PostgreSQL
 
 ### Pages Model, 簡易Page機能（仮）
 
