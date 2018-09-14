@@ -21,7 +21,7 @@
   # Collapse Navbar
 
   navbarCollapse = ->
-    if $('#mainNav').offset().top > 100
+    if $('#mainNav').offset().top > -1
       $('#mainNav').addClass 'navbar-shrink'
     else
       $('#mainNav').removeClass 'navbar-shrink'

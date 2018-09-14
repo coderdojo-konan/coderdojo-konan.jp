@@ -50,8 +50,6 @@ gem 'momentjs-rails'
 
 gem 'chart-js-rails'
 
-gem 'social-share-button'
-
 gem 'rails_12factor', group: :production
 
 group :development, :test do

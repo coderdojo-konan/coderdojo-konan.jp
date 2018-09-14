@@ -2,19 +2,23 @@
 - provide(:desc, 'このサイトの投稿一覧です。')
 - provide(:url, request.url)
 
-.container
-  .row
-    .col-lg-12.mx-auto.my-3
-      .card-columns
-        - @posts.each do |post|
-          = link_to post do
-            .card.border.bg-white.border-light.text-center.my-4
-              .card-body
-                .card-date-text.text-left
-                  %p.text-muted.font-italic
-                    Published: #{post.published_at}
-                %h4.card-title= post.title
-                %hr/
-                %p.card-text= truncate(markdown(post.body), length: 80)
-                %button.btn.btn-primary
-                  %p More
+%article.post-contents.bg-light
+  %section#post-list-section
+    .container
+      .row
+        .col-lg-12.mx-auto.my-3
+          .card-columns
+            - @posts.each do |post|
+              = link_to post do
+                .card.border.bg-white.border-light.text-center.my-4.float-box
+                  .card-body
+                    .card-date-text.text-left
+                      %p.text-muted.font-italic
+                        Published: #{post.published_at}
+                    %h4.card-title= post.title
+                    %hr/
+                    %p.card-text= truncate(markdown(post.body), length: 80)
+                    %button.btn.btn-primary
+                      %p
+                        More
+                        %i.fas.fa-caret-square-right
