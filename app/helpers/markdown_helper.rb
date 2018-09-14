@@ -1,6 +1,6 @@
 module MarkdownHelper
   def markdown(text)
-    html_render = Redcarpet::Render::HTML.new(filter_html: true, hard_wrap: true)
+    html_render = Redcarpet::Render::HTML.new(hard_wrap: true)
     options = {
         autolink: true,
         space_after_headers: true,
