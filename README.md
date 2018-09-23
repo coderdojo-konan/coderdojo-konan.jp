@@ -1,3 +1,5 @@
+[![TODO board](https://imdone.io/api/1.0/projects/5ba73ee894ef1f36fac85286/badge)](https://imdone.io/app#/board/CoderDojo-Konan-Okayama/coderdojo-konan.jp)
+
 # CoderDojo 岡山 岡南 公式ホームページ [(テスト公開中)](https://new-beta.coderdojo-konan.jp/)
 
 [![Build Status](https://travis-ci.org/CoderDojo-Konan-Okayama/coderdojo-konan.jp.svg?branch=master)](https://travis-ci.org/CoderDojo-Konan-Okayama/coderdojo-konan.jp)
