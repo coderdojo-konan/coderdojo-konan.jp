@@ -1,60 +1,53 @@
 source 'https://rubygems.org'
-ruby "2.5.0"
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.2.2'
-gem 'sass-rails', '~> 5.0.5'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2.1'
-
-gem 'sprockets-rails'
-
-gem 'jquery-rails'
-gem 'jquery-ui-rails'
-
-gem 'turbolinks'
-gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
-
-gem 'rest-client'
-
-gem 'travis'
-
-gem 'haml-rails'
-
-# gem 'kramdown', '~> 1.1.0'
-
-gem 'font-awesome-sass'
-
-gem 'bcrypt'
-
-gem 'omniauth-slack'
-
-gem 'bootsnap'
-
+# Rails
+gem 'rails', '5.2.0'
 gem 'pg'
+gem 'bootsnap'
+gem 'turbolinks', '~> 5.2.0'
 
-gem 'bootstrap', '~> 4.1.2'
 
-gem 'simple_form'
-
-gem 'redcarpet'
-
-gem 'slack-notifier'
+# JS
+gem 'coffee-rails'
+gem 'jbuilder', '~> 2.0'
+gem 'jquery-rails'
+gem 'momentjs-rails'
+gem 'chart-js-rails'
 
 gem 'toastr-rails'
 
+# SASS / CSS
+gem 'sass-rails', '~> 5.0.5'
+gem 'bootstrap', '~> 4.1.1'
+gem 'uglifier', '>= 1.3.0'
+gem 'font-awesome-sass'
+gem 'haml-rails'
+gem 'simple_form'
+
+# Slack
+gem 'omniauth-slack'
+gem 'slack-notifier'
+
+# Travis CI
+gem 'travis'
+
+# Others
+gem 'rest-client'
+
+gem 'bcrypt', '3.1.11'
+
 gem 'friendly_id'
 
-gem 'momentjs-rails'
-
-gem 'chart-js-rails'
+gem 'authlogic'
 
 gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
+
+  gem 'better_errors'
+  gem 'binding_of_caller'
 
   gem 'rspec-rails'
   gem 'factory_bot_rails'
