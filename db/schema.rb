@@ -10,15 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 ActiveRecord::Schema.define(version: 2018_09_06_104055) do
-=======
-ActiveRecord::Schema.define(version: 2018_09_04_090803) do
->>>>>>> Stashed changes
-=======
-ActiveRecord::Schema.define(version: 2018_09_04_090803) do
->>>>>>> Stashed changes
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,7 +28,7 @@ ActiveRecord::Schema.define(version: 2018_09_04_090803) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string "body"
+    t.text "body"
     t.string "title"
     t.datetime "published_at"
     t.integer "author_id"
