@@ -3,7 +3,6 @@
 [![Build Status](https://travis-ci.org/CoderDojo-Konan-Okayama/coderdojo-konan.jp.svg?branch=master)](https://travis-ci.org/CoderDojo-Konan-Okayama/coderdojo-konan.jp)
 [![Maintainability](https://api.codeclimate.com/v1/badges/5dc68bf422fb19f6c628/maintainability)](https://codeclimate.com/github/CoderDojo-Konan-Okayama/coderdojo-konan.jp/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/5dc68bf422fb19f6c628/test_coverage)](https://codeclimate.com/github/CoderDojo-Konan-Okayama/coderdojo-konan.jp/test_coverage)
-[![TODO board](https://imdone.io/api/1.0/projects/5ba73ee894ef1f36fac85286/badge)](https://imdone.io/app#/board/CoderDojo-Konan-Okayama/coderdojo-konan.jp)
 
 移行まではかなーりの時間がかかると思われますが、着実に作業を進めて行きます。
 
