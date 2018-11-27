@@ -42,7 +42,7 @@ gem 'bootsnap'
 
 gem 'pg'
 
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.1.2'
 
 gem 'simple_form'
 
