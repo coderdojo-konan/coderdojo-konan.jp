@@ -8,8 +8,7 @@ class ApplicationController < ActionController::Base
   private
     def put_ver_link
       @header_links = [
-        { url:  "#{root_url}", text: "ROOT" },
-        { url:  "#{root_url}", text: "ROOT" },
+        { url:  "#{root_url}", text: "TOP" },
         { url:  "#{root_url}visit-interview", text: "見学・取材について" },
         { url:  "#{root_url}f-and-q", text: "よくある質問 (F&Q)" }
       ]
