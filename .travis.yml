@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-- 2.3.4
+- 2.5.0
 services:
 - postgresql
 bundler_args: "--without development --deployment"
