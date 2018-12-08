@@ -204,7 +204,27 @@
         .service-box.mt-5.mx-auto
           %img.mb-3.sr-icons.img-fluid{:alt => "さくらインターネット", :src => "#{asset_path "index/supporter/sakura-internet.png"}"}(data-toggle="tooltip" data-placement="top" title="「さくらのクラウド」の無償提供")/
           %h4.mb-3 SAKURA INTERNET INC. 様
-%section#contact.bg-dark
+
+%section#how-to-support-us.bg-dark
+  .container
+    .row
+      .col-lg-12.text-center
+        %h2.section-heading How to Support Us?
+        %h6.section-heading.text-fade 私たちの活動を支援していただけますか？ 支援する方法はたくさんあります！
+        %hr.my-4/
+  .container
+    .row
+      .col-lg-6.text-center.mx-auto
+        = icon 'fas', 'code', class: "fa-5x mb-3 text-primary"
+        %h4.mb-3 メンターとして参加する
+
+      .col-lg-6.text-center.mx-auto
+        %a{href: "http://amzn.asia/bxMs41b"}
+          = icon "fab", "amazon",  class: "fa-5x mb-3 text-primary"
+          %h4.mb-3 Amazon ほしい物リストから支援する
+
+
+%section#contact.bg-white
   .container
     .row
       .col-lg-8.mx-auto.text-center
