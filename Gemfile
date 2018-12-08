@@ -32,7 +32,7 @@ gem 'haml-rails'
 
 # gem 'kramdown', '~> 1.1.0'
 
-gem 'font-awesome-rails'
+gem 'font-awesome-sass', '~> 5.5.0'
 
 gem 'bcrypt', '3.1.11'
 
