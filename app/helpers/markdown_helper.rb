@@ -1,7 +1,6 @@
 module MarkdownHelper
   def md_to_html(md_text)
     options = {
-      hard_wrap:       true,
       space_after_headers: true
     }
 
