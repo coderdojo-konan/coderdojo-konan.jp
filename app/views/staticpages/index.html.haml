@@ -188,7 +188,7 @@
     .row
       .col-lg-12.text-center
         %h2.section-heading Supporters
-        %h6.section-sub-heading.text-fade CoderDojo 岡山 岡南 の活動はこれらのサポータの皆様によって成り立っています！
+        %h6.section-sub-heading.text-fade CoderDojo 岡山 岡南 の活動はこれらのサポーターの皆様によって成り立っています！
         %hr.my-4/
   .container
     .row
@@ -204,6 +204,13 @@
         .service-box.mt-5.mx-auto
           %img.mb-3.sr-icons.img-fluid{:alt => "さくらインターネット", :src => "#{asset_path "index/supporter/sakura-internet.png"}"}(data-toggle="tooltip" data-placement="top" title="「さくらのクラウド」の無償提供")/
           %h4.mb-3 SAKURA INTERNET INC. 様
+    .row
+      .col-lg-8.text-center.mx-auto
+        %p.my-3
+          新規サポーター (企業様向け) も募集中です！ 詳しくは、
+          = link_to 'こちら', '/'
+          をご覧ください！
+
 
 %section#how-to-support-us.bg-dark
   .container
@@ -214,15 +221,21 @@
         %hr.my-4/
   .container
     .row
-      .col-lg-6.text-center.mx-auto
-        %a{href: "/join-as-mentor"}
+      .col-lg-6.text-center.mx-auto.mb-3
+        %a.color-black-link{href: "/join-as-mentor"}
           = icon 'fas', 'code', class: "fa-5x mb-3 text-primary"
           %h4.mb-3 メンターとして参加する
 
-      .col-lg-6.text-center.mx-auto
-        %a{href: "http://amzn.asia/bxMs41b"}
+      .col-lg-6.text-center.mx-auto.mb-3
+        %a.color-black-link{href: "http://amzn.asia/bxMs41b"}
           = icon "fab", "amazon",  class: "fa-5x mb-3 text-primary"
           %h4.mb-3 Amazon ほしい物リストから支援する
+    .row
+      .col-lg-8.text-center.mx-auto
+        %p.my-3
+          企業様向けのご案内は
+          = link_to 'こちら', '/'
+          にございます。ご覧ください
 
 
 %section#contact.bg-white
@@ -235,7 +248,7 @@
         %p.section-sub-heading 何か気になることがございましたら、お気軽にお問い合わせください！
         %hr.my-4/
     .row
-      .col-lg-8.mx-auto.mw-100
+      .col-lg-8.mx-auto.mb-5
         = render 'form'
     .row
       .col-lg-4.mx-auto.my-3.p-2.mw-100
