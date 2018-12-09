@@ -8,17 +8,18 @@ class ApplicationController < ActionController::Base
   private
     def put_ver_link
       @header_links = [
-        { url:  "#{root_url}", text: "TOP" },
-        { url:  "#{root_url}visit-interview", text: "見学・取材について" },
-        { url:  "#{root_url}f-and-q", text: "よくある質問 (F&Q)" }
+        { url:  "/", text: "TOP" },
+        { url:  "/visit-interview", text: "見学・取材について" },
+        { url:  "/f-and-q", text: "よくある質問 (F&Q)" },
+        { url: "/join-as-mentor", text: "メンターとして参加する" }
       ]
 
       @footer_links = [
-        { url: "#{root_url}pages", text: "ページ一覧" },
-        { url: "#{root_url}regulation", text: "会則" },
-        { url:  "#{root_url}visit-interview", text: "見学・取材について" },
-        { url:  "#{root_url}f-and-q", text: "よくある質問 (F&Q)"},
-        { url: "#{root_url}privacy-policy", text: "Privacy & Policy（個人情報保護方針）"}
+        { url: "/pages", text: "ページ一覧" },
+        { url: "/regulation", text: "会則" },
+        { url:  "/visit-interview", text: "見学・取材について" },
+        { url:  "/f-and-q", text: "よくある質問 (F&Q)"},
+        { url: "/privacy-policy", text: "Privacy & Policy（個人情報保護方針）"}
       ]
     end
 end

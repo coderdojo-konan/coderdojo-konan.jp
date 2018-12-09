@@ -12,14 +12,15 @@
     border-color: $primary;
     margin-bottom: 1.3rem;
   }
-  h2 {
-    margin-top: 1.5rem;
-  }
+  
+  h1,
+  h2,
   h3 {
-    margin-top: 1rem;
+    font-weight: bold;
+    margin-top: 2rem;
     margin-bottom: 1rem;
-    font-size: 1.5rem;
   }
+
   table {
     @extend .table;
     @extend .table-striped;
