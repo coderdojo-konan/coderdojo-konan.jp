@@ -39,6 +39,13 @@ h6 {
 
 p {
   font-family: 'M PLUS Rounded 1c', 'Open Sans', 'Helvetica Neue', Arial, sans-serif !important;
+  line-height: 1.8rem;
+}
+
+ul {
+  li {
+    line-height: 1.8rem;
+  }
 }
 
 .bg-primary {
@@ -63,7 +70,7 @@ section {
   font-weight: 600;
 }
 .section-sub-heading {
-  
+
 }
 
 ::-moz-selection {
