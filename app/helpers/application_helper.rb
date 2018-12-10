@@ -11,10 +11,14 @@ module ApplicationHelper
   def next_event_url
     unless ENV["CODERDOJO_KONAN_JP_OFFLINE_MODE"]
       latest_event = get_latest_event
-      if Date.parse(latest_event['started_at']) > Date.today
-        latest_event['event_url']
+      if !latest_event.nil?
+        if Date.parse(latest_event['started_at']) > Date.today
+          latest_event['event_url']
+        else
+          nil
+        end
       else
-        nil
+        "got_error"
       end
     else
       nil
@@ -23,9 +27,14 @@ module ApplicationHelper
 
   private
   def get_latest_event
-    response = rest_client.get(params: {:series_id => 3786, :order => 2})
-    json = JSON.parse(response.body)
-    json['events'].first
+    begin
+     response = rest_client.get params: {:series_id => 3786, :order => 2}
+
+     json = JSON.parse response.body
+     json['events'].first
+    rescue RestClient::ExceptionWithResponse => e
+     nil
+    end
   end
   def rest_client
     RestClient::Resource.new 'https://connpass.com/api/v1/event/'
