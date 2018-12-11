@@ -1,6 +1,9 @@
 class StaticpagesController < ApplicationController
+  include ApplicationHelper
+
   def index
     @contact_form = ContactForm.new
+    @latest_event_url = next_event_url
   end
   def next_event_is_still_planned
   end
