@@ -34,12 +34,12 @@
           %strong>"未来を創るクリエイター"
           になれ！
 
-        - if @latest_event_url.nil?
-          = link_to "申し込みページは只今準備中です！", "#{root_url}#page-top", class: 'btn btn-disabled btn-xl border border-primary js-scroll-trigger text-white'
-        - elsif @latest_event_url == "got_error"
-          = link_to "次回開催の確認に失敗しました。", "#{root_url}#page-top", class: 'btn btn-disabled btn-xl border border-error js-scroll-trigger text-white'
-        - else
-          = link_to "次回の開催をCheck!", @latest_event_url, class: 'btn btn-primary btn-xl js-scroll-trigger text-white', target: "_new"
+        -# - if @latest_event_url.nil?
+        -#   = link_to "申し込みページは只今準備中です！", "#{root_url}#page-top", class: 'btn btn-disabled btn-xl border border-primary js-scroll-trigger text-white'
+        -# - elsif @latest_event_url == "got_error"
+        -#   = link_to "次回開催の確認に失敗しました。", "#{root_url}#page-top", class: 'btn btn-disabled btn-xl border border-error js-scroll-trigger text-white'
+        -# - else
+        -#   = link_to "次回の開催をCheck!", @latest_event_url, class: 'btn btn-primary btn-xl js-scroll-trigger text-white', target: "_new"
 %section#about.bg-primary.p-5
   .container
     .row
@@ -58,13 +58,13 @@
           CoderDojoでは、Ninja同士（参加している子供をNinjaといいます。）で教えあったり、
           %br/
           わからないことがあれば、現役プログラマーを中心としたメンターさんに質問したりできます。
-          
-        - if @latest_event_url.nil?
-          = link_to "申し込みページは只今準備中です！", "#{root_url}#page-top", class: 'btn btn-disabled btn-xl border border-primary js-scroll-trigger text-white'
-        - elsif @latest_event_url == "got_error"
-          = link_to "次回開催の確認に失敗しました。", "#{root_url}#page-top", class: 'btn btn-disabled btn-xl border border-error js-scroll-trigger text-white'
-        - else
-          = link_to "次回の開催をCheck!", @latest_event_url, class: 'btn btn-primary btn-xl js-scroll-trigger text-white', target: "_new"
+
+        -# - if @latest_event_url.nil?
+        -#   = link_to "申し込みページは只今準備中です！", "#{root_url}#page-top", class: 'btn btn-disabled btn-xl border border-primary js-scroll-trigger text-white'
+        -# - elsif @latest_event_url == "got_error"
+        -#   = link_to "次回開催の確認に失敗しました。", "#{root_url}#page-top", class: 'btn btn-disabled btn-xl border border-error js-scroll-trigger text-white'
+        -# - else
+        -#   = link_to "次回の開催をCheck!", @latest_event_url, class: 'btn btn-primary btn-xl js-scroll-trigger text-white', target: "_new"
 %section#thinking-together.bg-dark.p-3
   .container
     .row
