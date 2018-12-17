@@ -241,10 +241,20 @@
         %h2.section-heading
           %i.fa.fa-envelope-o.sr-contact.mx-3
           Contact us
-        %p.section-sub-heading 何か気になることがございましたら、お気軽にお問い合わせください！
         %hr.my-4/
     .row
       .col-lg-8.mx-auto.mb-5
+        %p.text-center
+          よくお問い合わせされるご質問を、
+          = link_to 'F&Q ページ', '/f-and-q'
+          にてまとめさせていただいております！
+        %p.text-center
+          担当の負担軽減のため、一度ご確認の上、当てはまるものがなかった場合、
+          %br
+          それでもご不明な点がある場合などはこちらのフォームよりお気軽にお問い合わせください！
+          %br
+          ご協力よろしくお願いいたします。
+
         = render 'form'
     .row
       .col-lg-4.mx-auto.my-3.p-2.mw-100

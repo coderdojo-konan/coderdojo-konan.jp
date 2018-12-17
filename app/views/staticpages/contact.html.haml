@@ -1,12 +1,22 @@
 %section#contact
   .container
     .row
-      .col-lg-8.mx-auto.text-center
+      .col-lg-8.mx-auto.text-center.mb-3
         %h2.section-heading
           %i.fa.fa-envelope-o.sr-contact.mx-3
           Contact us
         %hr.my-4/
-        %p.mb-5 何か気になることがございましたら、お気軽にお問い合わせください！
+        %p お問い合わせフォームです。ご対応には少し時間をいただく場合がございます。ご了承ください。
+        %p
+          なお、よくお問い合わせされるご質問を、
+          = link_to 'F&Q ページ', '/f-and-q'
+          にてまとめさせていただいております！
+        %p
+          担当の負担軽減のため、一度ご確認の上、当てはまるものがなかった場合、
+          %br
+          それでもご不明な点がある場合などはお気軽にお問い合わせください！
+          %br
+          ご協力よろしくお願いいたします。
     .row
       .col-lg-8.mx-auto.mw-100
         = render 'form'
