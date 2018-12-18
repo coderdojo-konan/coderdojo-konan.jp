@@ -24,7 +24,7 @@
         %tr
           %th{:scope => "row"}= post.id
           %td= post.title
-          %td= truncate(strip_tags(markdown(post.body)), length: 80)
+          %td= truncate(strip_tags(md_to_html(post.body)), length: 80)
           %td= post.published_at
           %td= post.slug
           %td= post.author_id

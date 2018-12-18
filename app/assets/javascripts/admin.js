@@ -1,9 +1,8 @@
 //= require jquery
 //= require rails-ujs
 //= require turbolinks
-//= require Chart.min
-//= require datatables/dataTables.bootstrap4.js
-//= require datatables/jquery.dataTables.js
-//= require jquery-easing/jquery.easing.js
-//= require datatables/dataTables.bootstrap4.js
+//= require toastr
+//= require popper
+//= require js.cookie
+
 //= require_tree ./admin

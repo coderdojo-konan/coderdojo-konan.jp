@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
+  devise_for :users, path: :admin
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   resources :posts, only: [:show, :index]
 
   namespace :admin do
+    get '/' => 'posts#index'
     resources :posts, except: [:show]
+    resources :users, only: [:index, :destroy]
+    patch '/user/:id/approve_user' => 'users#approve_user', as: 'approve_user'
   end
 
   root 'staticpages#index'

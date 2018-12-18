@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Rails
-gem 'rails', '5.2.0'
+gem 'rails', '5.2.2'
 gem 'pg'
 gem 'bootsnap'
 gem 'turbolinks', '~> 5.2.0'
@@ -11,8 +11,6 @@ gem 'turbolinks', '~> 5.2.0'
 gem 'coffee-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
-gem 'momentjs-rails'
-gem 'chart-js-rails'
 
 gem 'toastr-rails'
 
@@ -36,9 +34,12 @@ gem 'rest-client'
 
 gem 'bcrypt', '3.1.11'
 
+gem 'redcarpet'
 gem 'friendly_id'
 
-gem 'authlogic'
+gem 'dotenv-rails'
+
+gem 'devise'
 
 gem 'rails_12factor', group: :production
 

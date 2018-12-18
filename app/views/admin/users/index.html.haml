@@ -1,0 +1,38 @@
+- provide(:title, 'ユーザー一覧')
+- provide(:desc, 'このサイトのユーザー一覧です。')
+- provide(:url, request.url)
+- provide(:card_title, 'ユーザー一覧')
+
+.new-btn-wrapper.text-right
+  -# = link_to 'Invite New User', new_admin_user_path, class: "btn btn-outline-primary mx-2 my-2 "
+
+.table-responsive
+  %table#dataTable.table.table-bordered{:cellspacing => "0", :width => "100%"}
+    %thead
+      %tr
+        %th{:scope => "col"} #
+        %th{:scope => "col"} Name
+        %th{:scope => "col"} Display Name
+        %th{:scope => "col"} Email
+        %th{:scope => "col"} Last Sign-in at
+        %th{:scope => "col"} Role
+        %th{:scope => "col"} is Approved?
+        - if current_user.admin?
+          %th
+          %th
+    %tbody
+      - @users.each do |user|
+        %tr
+          %th{:scope => "row"}= user.id
+          %td= user.name
+          %td= user.display_name
+          %td= user.email
+          %td= user.last_sign_in_at
+          %td= user.role
+          %td= user.approved
+          - if current_user.admin?
+            - if !user.approved?
+              %td= link_to 'Approve', admin_approve_user_path(user), method: :patch, data: { confirm: 'Are you sure?' }
+            - else
+              %td
+            %td= link_to 'Destroy', ['admin',user], method: :delete, data: { confirm: 'Are you sure?' }

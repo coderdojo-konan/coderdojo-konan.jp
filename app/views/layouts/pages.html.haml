@@ -28,6 +28,10 @@
   %body#page-top
     = render 'beta_alert_modal'
     = render 'header'
+    - flash.each do |key, value|
+      #info{style: "display:none" }
+        = content_tag(:p, value, class: "#{key}")
+        
     %article
       %section#page-content
         .container

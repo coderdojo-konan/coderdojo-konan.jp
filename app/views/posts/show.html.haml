@@ -17,4 +17,4 @@
             .col-lg-8.sns-share-container.d-flex.justify-content-right.align-items-right
           %hr
           .content.m-3.p-2
-            = raw markdown @post.body
+            = raw md_to_html @post.body

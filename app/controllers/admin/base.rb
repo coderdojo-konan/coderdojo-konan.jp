@@ -1,3 +1,4 @@
 class Admin::Base < ApplicationController
-   layout 'admin'
+  before_action :sign_in_required
+  layout 'admin'
 end
