@@ -1,5 +1,7 @@
 class Post < ApplicationRecord
   extend FriendlyId
+  belongs_to :user
+
   friendly_id :slug, use: :slugged
 
   validates :title, presence: true

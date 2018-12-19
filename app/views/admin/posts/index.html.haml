@@ -26,7 +26,7 @@
           %td= truncate(strip_tags(md_to_html(post.body)), length: 80)
           %td= post.published_at
           %td= post.slug
-          %td= post.author_id
+          %td= post.user.name
           %td= link_to 'Show', post, :target=>["_new"]
           %td= link_to 'Edit', edit_admin_post_path(post)
           %td= link_to 'Destroy', [:admin, post], method: :delete, data: { confirm: 'Are you sure?' }
