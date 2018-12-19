@@ -15,6 +15,7 @@
         %th{:scope => "col"} Published at
         %th{:scope => "col"} Path
         %th{:scope => "col"} Auther
+        %th{:scope => "col"} Draft / Published
         %th
         %th
         %th
@@ -27,6 +28,11 @@
           %td= post.published_at
           %td= post.slug
           %td= post.user.name
+          %td
+            - if post.published?
+              Published!
+            - else
+              Draft
           %td= link_to 'Show', post, :target=>["_new"]
           %td= link_to 'Edit', edit_admin_post_path(post)
           %td= link_to 'Destroy', [:admin, post], method: :delete, data: { confirm: 'Are you sure?' }
