@@ -6,15 +6,42 @@
   %section#post-list-section
     .container
       .row
-        .col-lg-12.mx-auto.my-3.p-3.bg-white
+        .col-lg-10.mx-auto.my-3.py-5.bg-white
           .row
-            .col-lg-12.headings.page-title.m-2.p-2
+            .col-lg-10.headings.mx-auto.page-title.m-2
               %h1= @post.title
-            .col-lg-4.date-text
-              %p.text-muted
-                投稿日:
-                = @post.published_at
-            .col-lg-8.sns-share-container.d-flex.justify-content-right.align-items-right
-          %hr
-          .content.m-3.p-2
-            = raw md_to_html @post.body
+          .row
+            .col-lg-10.mb-2.mx-auto
+              .row
+                .col-lg-5
+                  %p.text-muted.mb-2
+                    Published at 
+                    = @post.published_at.strftime('%Y/%m/%d %H:%M')
+                .col-lg-5
+                  %p.text-muted.mb-2
+                    By
+                    = @post.user.name
+          .row
+            .col-lg-10.mb-3.mx-auto
+              %ul.sns-share-list.my-3
+                %li.sns-share-list__item
+                  = link_to icon("fab", "facebook-f"),
+                  "//www.facebook.com/sharer.php?src=bm&u=#{ request.url }&t=#{ full_title(@post.title) }",
+                  title: "Share on Fasebook", class: "sns-share-list__link icon-facebook",
+                  onclick: "return sns_window(this, 800, 600);"
+
+                %li.sns-share-list__item
+                  = link_to icon("fab", "twitter"),
+                  "//twitter.com/share?text=#{ full_title(@post.title) }&url=#{ request.url }&via=CoderDojoKonan_",
+                  title: "Share on Twitter", class: "sns-share-list__link icon-twitter",
+                  onclick: "return sns_window(this, 400, 600);"
+
+                %li.sns-share-list__item
+                  = link_to icon("fab", "google-plus-g"),
+                  "//plus.google.com/share?url=#{ request.url }",
+                  title: "Share on Google+", class: "sns-share-list__link icon-google-plus",
+                  onclick: "return sns_window(this, 600, 500);"
+
+          .row
+            .col-lg-10.mx-auto
+              = raw md_to_html @post.body
