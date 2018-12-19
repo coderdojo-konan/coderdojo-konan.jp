@@ -6,21 +6,24 @@ gem 'pg'
 gem 'bootsnap'
 gem 'turbolinks', '~> 5.2.0'
 
-
-# JS
+# Javascript
 gem 'coffee-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
-
+gem 'momentjs-rails'
 gem 'toastr-rails'
 
-# SASS / CSS
+# CSS / SCSS
 gem 'sass-rails', '~> 5.0.5'
 gem 'bootstrap', '~> 4.1.1'
 gem 'uglifier', '>= 1.3.0'
+
+
+# Design
 gem 'font-awesome-sass'
 gem 'haml-rails'
 gem 'simple_form'
+gem 'bootstrap4-datetime-picker-rails'
 
 # Slack
 gem 'omniauth-slack'

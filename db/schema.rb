@@ -31,8 +31,9 @@ ActiveRecord::Schema.define(version: 2018_11_28_155210) do
     t.text "body"
     t.string "title"
     t.datetime "published_at"
-    t.integer "author_id"
+    t.integer "user_id"
     t.string "slug"
+    t.boolean "is_draft"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
