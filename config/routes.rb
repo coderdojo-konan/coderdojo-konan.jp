@@ -8,7 +8,8 @@ Rails.application.routes.draw do
     get '/' => 'posts#index'
     resources :posts, except: [:show]
     resources :users, only: [:index, :destroy]
-    patch '/user/:id/approve_user' => 'users#approve_user', as: 'approve_user'
+    patch '/user/:id/approve' => 'users#approve_user', as: 'user_approve'
+    patch '/user/:id/update_role' => 'users#update_role', as: 'user_update_role'
   end
 
   root 'staticpages#index'

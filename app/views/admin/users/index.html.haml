@@ -20,6 +20,7 @@
         - if current_user.admin?
           %th
           %th
+          %th
     %tbody
       - @users.each do |user|
         %tr
@@ -32,7 +33,16 @@
           %td= user.approved
           - if current_user.admin?
             - if !user.approved?
-              %td= link_to 'Approve', admin_approve_user_path(user), method: :patch, data: { confirm: 'Are you sure?' }
+              %td= link_to 'Approve', admin_user_approve_path(user), method: :patch, data: { confirm: 'Are you sure?' }
             - else
               %td
+
+            %td
+              .btn-group.dropleft
+                %button.btn.btn-primary.dropdown-toggle{ 'data-toggle' => "dropdown", 'type' => 'button', 'aria-haspopup' => 'true', 'aria-expanded' => 'false' } Update Role
+                .dropdown-menu
+                  - unless user.admin?
+                    = link_to 'to Admin', admin_user_update_role_path(user, params: { user: { role: 'admin' }}), method: :patch, data: { confirm: 'Are you sure?' }, class: 'dropdown-item'
+                  - unless user.member?
+                    = link_to 'to Member', admin_user_update_role_path(user, params: { user: { role: 'member' }}),method: :patch, data: { confirm: 'Are you sure?' }, class: 'dropdown-item'
             %td= link_to 'Destroy', ['admin',user], method: :delete, data: { confirm: 'Are you sure?' }
