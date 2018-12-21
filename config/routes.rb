@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   get '/pages' => 'pages#index'
 
 
+  resources :users, only: [:show]
+
   resources :pages, only: [:show], :path => '/'
 
   # Example of regular route:
