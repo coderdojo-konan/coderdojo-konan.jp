@@ -15,12 +15,12 @@
               .row
                 .col-lg-5
                   %p.text-muted.mb-2
-                    Published at 
+                    Published at
                     = @post.published_at.strftime('%Y/%m/%d %H:%M')
                 .col-lg-5
                   %p.text-muted.mb-2
                     By
-                    = @post.user.name
+                    = link_to @post.user.name, @post.user 
           .row
             .col-lg-10.mb-3.mx-auto
               %ul.sns-share-list.my-3
