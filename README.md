@@ -1,62 +1,43 @@
-# CoderDojo 岡山 岡南 公式ホームページ [(テスト公開中)](https://new-beta.coderdojo-konan.jp/)
+coderdojo-konan.jp (The site of CoderDojo Konan Okayama)
+====
 
 [![Build Status](https://travis-ci.org/CoderDojo-Konan-Okayama/coderdojo-konan.jp.svg?branch=master)](https://travis-ci.org/CoderDojo-Konan-Okayama/coderdojo-konan.jp)
 [![Maintainability](https://api.codeclimate.com/v1/badges/5dc68bf422fb19f6c628/maintainability)](https://codeclimate.com/github/CoderDojo-Konan-Okayama/coderdojo-konan.jp/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/5dc68bf422fb19f6c628/test_coverage)](https://codeclimate.com/github/CoderDojo-Konan-Okayama/coderdojo-konan.jp/test_coverage)
 
-移行まではかなーりの時間がかかると思われますが、着実に作業を進めて行きます。
+CoderDojo 岡山 岡南 の公式ホームページになります。  
+現在、製作中ですが、テスト公開も兼ねて、 https://new-beta.coderdojo-konan.jp/ よりご覧いただけます。
 
-なお、ソースコードや仕組みや中の文などは coderdojo.jp (https://github.com/coderdojo-japan/coderdojo.jp) を参考にさせていただいております。
+The official site of CoderDojo Konan Okayama.  
+We are still developing now, but you can see the demo site at [here](https://new-beta.coderdojo-konan.jp/).
 
-また、実際のサイトは、 https://new-beta.coderdojo-konan.jp/ からご覧になれます。（テスト公開中）
+## How to Contribution
+
+### Operation of git
+
+1. Fork this repo.
+2. Create your feature branch. (`git checkout -b <your-new-feature>`)
+3. Commit your changes. (`git commit -am '<your-new-changes-message>'`)
+4. Push to the branch. (`git push origin <your-new-feature>`)
+5. Create new Pull Request.
+
+### 1. Update pages
+
+If you want to edit pages that listed in [/pages](https://new-beta.coderdojo-konan.jp/pages),
+you can do it by editing markdown file at [/db/pages](/db/pages).
 
 
-## 各機能・仕様
 
-これから先の予定も含めて思い出せる範囲で書いておきます。
+## Licence
 
-### 全体的な仕様
+このリポジトリは Apache-2.0 ライセンスの元で公開されています。
+詳しくは、 [LICENCE](/LICENCE) をご覧ください。
 
-- Bootstrap 4 を使用
-- Ruby on Rails + RSpec
-- 公開環境はいまのところ Heroku
-- Heroku のため Production 環境のデータベースは PostgreSQL
-- Develop 環境のデータベースも PostgreSQL
+This repository is published under the Apache-2.0 Licence.
+Please see the [LICENCE](/LICENCE) file.
 
-### Pages Model, 簡易Page機能（仮）
+[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
 
-CoderDojo Japan さんの Docs を参考にさせて頂いた上での実装なので、機能はほぼ同じです。
+# References
 
-coderdojo-japan/coderdojo.jp
-
-db/pages 配下のMDファイルをそのまま変換し、比較的軽いページの生成をします。
-
-WP で言う所の **固定ページ** 的感覚です。
-
-### StaticPages, 静的ページ
-
-HAML直書き... そのまま表示です。（ヘッダー・フッターのぞく。）
-
-デザインが変則的な場合に使います。（例： Topページ、作品紹介ページなど）
-
-WP で言う所の **固定ページ** 的感覚で、なおかつ複雑なデザインがいい場合に使う。
-
-### Posts Model, ブログ記事
-
-ダッシュボードからの操作で投稿・削除・予約公開などを行います。
-
-MDを使いますが、今後 TinyMCE みたいなのを導入するかもしれません。
-
-- 投稿
-- 削除
-- 予約投稿
-- スラッグ設定
-- 限定公開（予定）
-
-まだまだ一部を作っていってる途中で、後々もうちょっと追加したいと思っている機能もあります。
-
-WP で言う所の **投稿**　ですね、ストレート。
-
-## Want to...
-
-- SpeakerDeck においてあるチュートリアルの組み込み・課題などはリンクさせたい。
+[coderdojo.jp](https://github.com/coderdojo-japan/coderdojo.jp)
