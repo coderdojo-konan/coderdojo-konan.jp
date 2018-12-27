@@ -29,23 +29,20 @@ gem 'bootstrap4-datetime-picker-rails'
 gem 'omniauth-slack'
 gem 'slack-notifier'
 
+# Posts / Admin
+gem "wysiwyg-rails"
+gem 'friendly_id'
+gem 'devise'
+
 # Travis CI
 gem 'travis'
 
 # Others
 gem 'rest-client'
-
 gem 'bcrypt', '3.1.11'
-
 gem 'redcarpet'
-gem 'friendly_id'
-
 gem 'dotenv-rails'
-
-gem 'devise'
-
 gem 'new_google_recaptcha'
-
 gem 'rails_12factor', group: :production
 
 group :development, :test do

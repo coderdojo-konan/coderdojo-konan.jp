@@ -20,7 +20,7 @@
                 .col-lg-5
                   %p.text-muted.mb-2
                     By
-                    = link_to @post.user.name, @post.user 
+                    = link_to @post.user.name, @post.user
           .row
             .col-lg-10.mb-3.mx-auto
               %ul.sns-share-list.my-3
@@ -44,4 +44,4 @@
 
           .row
             .col-lg-10.mx-auto
-              = raw md_to_html @post.body
+              = raw @post.body
