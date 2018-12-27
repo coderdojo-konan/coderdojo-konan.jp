@@ -181,6 +181,8 @@ GEM
     net-http-persistent (2.9.4)
     net-http-pipeline (1.0.1)
     netrc (0.11.0)
+    new_google_recaptcha (0.1.0)
+      rails (>= 5.0.0)
     nio4r (2.3.1)
     nokogiri (1.9.0)
       mini_portile2 (~> 2.4.0)
@@ -370,6 +372,7 @@ DEPENDENCIES
   jquery-rails
   listen
   momentjs-rails
+  new_google_recaptcha
   omniauth-slack
   pg
   rails (= 5.2.2)

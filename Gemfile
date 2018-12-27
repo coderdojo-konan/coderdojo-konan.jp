@@ -44,6 +44,8 @@ gem 'dotenv-rails'
 
 gem 'devise'
 
+gem 'new_google_recaptcha'
+
 gem 'rails_12factor', group: :production
 
 group :development, :test do

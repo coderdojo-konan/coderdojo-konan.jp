@@ -17,7 +17,7 @@ class StaticpagesController < ApplicationController
     @contact_form = ContactForm.new(contact_form_params)
 
     respond_to do |format|
-      if @contact_form.save
+      if NewGoogleRecaptcha.human?(params[:new_google_recaptcha_token], @contact_form) && @contact_form.save
         flash[:notice] = 'お問い合わせの送信が完了しました'
         format.html { redirect_to :action => "index" }
         format.json { render :show, status: :ok, location: @contact_form }
@@ -32,6 +32,6 @@ class StaticpagesController < ApplicationController
 
   private
     def contact_form_params
-      params.require(:contact_form).permit(:name, :email, :subject, :body, :agreement_privacy_policy)
+      params.require(:contact_form).permit(:name, :email, :subject, :body, :agreement_privacy_policy, :new_google_recaptcha_token)
     end
 end
