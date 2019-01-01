@@ -13,13 +13,6 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-require 'simplecov'
-require "codeclimate-test-reporter"
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
-  SimpleCov::Formatter::HTMLFormatter,
-  CodeClimate::TestReporter::Formatter
-])
-SimpleCov.start "rails"
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
