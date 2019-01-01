@@ -3,8 +3,9 @@ rvm:
 - 2.5.0
 services:
 - postgresql
-bundler_args: "--without development --deployment"
 cache: bundler
+before_install:
+- gem install bundler
 before_script:
 - cp config/database.travis.yml config/database.yml
 - bundle exec rake db:create
