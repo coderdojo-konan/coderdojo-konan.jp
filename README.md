@@ -36,8 +36,6 @@ you can do it by editing markdown file at [/db/pages](/db/pages).
 This repository is published under the Apache-2.0 Licence.
 Please see the [LICENCE](/LICENCE) file.
 
-[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
-
 # References
 
 [coderdojo.jp](https://github.com/coderdojo-japan/coderdojo.jp)
