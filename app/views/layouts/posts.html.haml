@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    = render 'head'
+
+  %body#page-top
+    = render 'header'
+    - flash.each do |key, value|
+      #info{style: "display:none" }
+        = content_tag(:p, value, class: "#{key}")
+
+    = yield
+    = render 'footer'

@@ -1,7 +1,16 @@
 Rails.application.routes.draw do
-  resources :posts
+  devise_for :users, path: :admin
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  resources :posts, only: [:show, :index]
+
+  namespace :admin do
+    get '/' => 'posts#index'
+    resources :posts, except: [:show]
+    resources :users, only: [:index, :destroy]
+    patch '/user/:id/approve' => 'users#approve_user', as: 'user_approve'
+    patch '/user/:id/update_role' => 'users#update_role', as: 'user_update_role'
+  end
 
   root 'staticpages#index'
 
@@ -10,9 +19,10 @@ Rails.application.routes.draw do
   get '/contact-form' => 'staticpages#contact'
 
   get '/pages' => 'pages#index'
-  get '/next-event-is-still-planned' => 'staticpages#next_event_is_still_planned'
-  get '/ninjas-works' => 'staticpages#ninjas_works'
-  
+
+
+  resources :users, only: [:show]
+
   resources :pages, only: [:show], :path => '/'
 
   # Example of regular route:
