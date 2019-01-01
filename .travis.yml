@@ -11,11 +11,6 @@ before_script:
 - bundle exec rake db:migrate
 script:
 - bundle exec rspec spec
-addons:
-  code_climate:
-    repo_token: 6e56261cc3c2a680d6a54edf926bd4ae0e2d0171190c429bd5b6748892301372
-after_success:
-  - bundle exec codeclimate-test-reporter
 deploy:
   provider: heroku
   api_key:

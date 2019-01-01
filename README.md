@@ -2,8 +2,6 @@ coderdojo-konan.jp (The site of CoderDojo Konan Okayama)
 ====
 
 [![Build Status](https://travis-ci.org/CoderDojo-Konan-Okayama/coderdojo-konan.jp.svg?branch=master)](https://travis-ci.org/CoderDojo-Konan-Okayama/coderdojo-konan.jp)
-[![Maintainability](https://api.codeclimate.com/v1/badges/5dc68bf422fb19f6c628/maintainability)](https://codeclimate.com/github/CoderDojo-Konan-Okayama/coderdojo-konan.jp/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/5dc68bf422fb19f6c628/test_coverage)](https://codeclimate.com/github/CoderDojo-Konan-Okayama/coderdojo-konan.jp/test_coverage)
 
 CoderDojo 岡山 岡南 の公式ホームページになります。  
 現在、製作中ですが、テスト公開も兼ねて、 https://new-beta.coderdojo-konan.jp/ よりご覧いただけます。
