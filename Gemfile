@@ -30,7 +30,7 @@ gem 'omniauth-slack'
 gem 'slack-notifier'
 
 # Posts / Admin
-gem "wysiwyg-rails"
+gem 'simplemde-rails'
 gem 'friendly_id'
 gem 'devise'
 
@@ -44,6 +44,8 @@ gem 'redcarpet'
 gem 'dotenv-rails'
 gem 'new_google_recaptcha'
 gem 'rails_12factor', group: :production
+
+gem "ruby-oembed"
 
 group :development, :test do
   gem 'sqlite3'
