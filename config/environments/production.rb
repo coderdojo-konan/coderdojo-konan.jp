@@ -104,6 +104,18 @@ Rails.application.configure do
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
 
+  config.action_mailer.default_url_options = { host: ENV['DEFAULT_URL_OPTIONS_HOST'] }
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => "smtp.zoho.com",
+    :port => 587,
+    :user_name => ENV["EMAIL_SMTP_USER_NAME"],
+    :password => ENV["EMAIL_SMTP_PASSWORD"],
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
+
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
