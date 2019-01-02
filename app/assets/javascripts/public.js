@@ -19,4 +19,4 @@
 //= require toastr
 //= require js.cookie
 //= require moment
-//= require_tree .
+//= require_tree ./public
