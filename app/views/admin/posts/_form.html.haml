@@ -6,6 +6,6 @@
   = f.input :title
   = f.input :slug
   = f.input :published_at, as: :date_time_picker
-  = f.input :body, as: :text, input_html: { :rows => '20', :autocomplete => "off", :id => "froalaEditor" }
+  = f.input :body, as: :text, input_html: { :rows => '20', :autocomplete => "off", :id => "simpleMDE" }
   = f.input :is_draft, input_html: { :checked => 'checked' }
   = f.button :submit, class: 'btn-outline-primary'

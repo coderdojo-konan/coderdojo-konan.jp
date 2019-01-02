@@ -44,4 +44,4 @@
 
           .row
             .col-lg-10.mx-auto
-              = raw @post.body
+              = raw md_to_html @post.body

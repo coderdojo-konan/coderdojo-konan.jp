@@ -30,7 +30,7 @@ gem 'omniauth-slack'
 gem 'slack-notifier'
 
 # Posts / Admin
-gem "wysiwyg-rails"
+gem 'simplemde-rails'
 gem 'friendly_id'
 gem 'devise'
 
