@@ -17,14 +17,21 @@
       }
     }
 
-    h2 {
-      text-align: center;
-    }
-
     &:hover {
       box-shadow: 0 15px 30px -30px rgba(0,0,0,.15),0 0 5px rgba(0,0,0,.1);
       transform: translateY(-1px);
       transition: 0.2s;
     }
+  }
+}
+
+.post-content {
+  h2, h3, h4 {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: dotted 1px $gray-500;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    margin-right: 5%;
   }
 }
