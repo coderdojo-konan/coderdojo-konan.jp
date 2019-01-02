@@ -67,8 +67,8 @@ PC を忘れて来ないようにしましょう！
 予習やセットアップ、素材集めはあらかじめしっかりやっておくことをオススメします。
 
 なお、もし Scratch においては当日、初参加の方向けテキストを公開しています。  
-ご参考までに！
-https://speakerdeck.com/yu_san_19/lets-getting-started-scratch
+ご参考までに！  
+<https://speakerdeck.com/yu_san_19/lets-getting-started-scratch>
 
 それでは、当日会場でお会いしましょう。
 

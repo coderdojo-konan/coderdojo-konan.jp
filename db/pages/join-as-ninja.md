@@ -11,7 +11,7 @@
 
 > CoderDojoはオープンソース※1であり、各地でボランティアが自主的に運営しています。
 
-> ※1オープンソースとは：http://gigazine.net/news/20140310-open-source-lego/
+> ※1オープンソースとは：<http://gigazine.net/news/20140310-open-source-lego/>
 
 > [CoderDojo 公式ホームページ](http://coderdojo.com)
 
@@ -28,7 +28,7 @@
 # 開催概要
 ---
 場所：岡山市立岡南公民館
-http://www.city.okayama.jp/kouminkan/kounan/
+<http://www.city.okayama.jp/kouminkan/kounan/>
 
 持ち物：ノートPC（持ち込み）,**水筒** 重要！,USBメモリー(PCレンタルの方),やりたい事について書いてある本（持っている人）など
 

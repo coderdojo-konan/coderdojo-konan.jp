@@ -10,7 +10,7 @@
 ただ、Ninjaの場合は見学となりますととてもつまらないと思いますので、是非ご参加ください。  
 初参加、初心者でも丁寧にサポートいたします。ご安心ください。
 
-見学フォーム: [https://goo.gl/forms/M9ouksAqZ37BZaRM2](https://goo.gl/forms/M9ouksAqZ37BZaRM2)
+見学フォーム: <https://goo.gl/forms/M9ouksAqZ37BZaRM2>
 
 また、会場の広さによって見学が難しい場合もありますのでご了承ください。
 

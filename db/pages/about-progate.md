@@ -16,7 +16,7 @@ CoderDojo の理念にご賛同頂き、全国のCoderDojoに法人有料プラ�
 
 ご希望の方は、チームへの招待メールをお届けしますので、申し込みアンケート欄に希望するをチェックしてください。
 
-Progate: https://prog-8.com/
+Progate: <https://prog-8.com/>
 
 # 当Dojoがこのサービスを導入する目的
 ---

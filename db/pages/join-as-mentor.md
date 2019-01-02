@@ -34,14 +34,14 @@
   - 何かしらのスキルを持っていて、Ninja に教えることができる方。
   - もしくは、開催を円滑に進めるために、受付、セッティング、お世話、誘導やその他各種サポートをしてくださる方。
 - CoderDojo の理念、 CoderDojo 憲章 への同意がいただける方。
-  - CoderDojo 憲章 https://coderdojo.jp/docs/charter
+  - CoderDojo 憲章 <https://coderdojo.jp/docs/charter>
 - やる気があり、ご自身が楽しんで参加できる方
 - ある程度継続的にご参加いただける方
 
 ## 申し込み方法:
 ---
 もしご参加いただけるという方は、下記フォームよりお申し込みお願いいたします。  
-https://goo.gl/forms/wN8OjuGKJIaYQPDF3
+<https://goo.gl/forms/wN8OjuGKJIaYQPDF3>
 
 ## その他 補足など
 ---

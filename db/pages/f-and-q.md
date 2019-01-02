@@ -51,10 +51,10 @@ CoderDojo 岡山 岡南 のページはこちらです: <https://konan-coderdojo
 また、 公式 LINE アカウントや、その他 SNS をフォローしていただくと、  
 申し込み開始など、様々な最新情報が確認できますので、ぜひご活用ください。
 
-- LINE@ (公式LINE アカウント) [推奨]: https://line.me/R/ti/p/%40rjd0968e
+- LINE@ (公式LINE アカウント) [推奨]: <https://line.me/R/ti/p/%40rjd0968e>
 - Twitter: [@CoderDojoKonan_](https://twitter.com/CoderDojoKonan_)
 - Instagram: [@coderdojo.konan.okayama](https://www.instagram.com/coderdojo.konan.okayama/)
-- Facebook: https://www.facebook.com/CoderDojo.Konan/  
+- Facebook: <https://www.facebook.com/CoderDojo.Konan/>  
 
 お申し込み終了後、抽選結果発表日になりましたら結果についてのメールが送付されるかと思います。
 

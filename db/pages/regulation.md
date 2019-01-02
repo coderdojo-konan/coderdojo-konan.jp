@@ -141,13 +141,13 @@ CoderDojo 憲章で定められている性別、人種、宗教などによる�
 もとで個人情報以外は自由に共有・翻案することができる。
 
 ## 2. CoderDojo 憲章
-本文（英語）
-https://coderdojo.jp/docs/charter_en
-日本語訳
-https://coderdojo.jp/docs/charter
+本文（英語）:  
+<https://coderdojo.jp/docs/charter_en>
+日本語訳:  
+<https://coderdojo.jp/docs/charter>
 
 ## 3. この会のウェブサイトホームページアドレス
-https://coderdojo-konan.jp/
+<https://coderdojo-konan.jp/>
 
 ## 4. 役員・会員名簿
 会員は別紙の会員名簿において記載されている者とする。
