@@ -45,6 +45,8 @@ gem 'dotenv-rails'
 gem 'new_google_recaptcha'
 gem 'rails_12factor', group: :production
 
+gem "ruby-oembed"
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
