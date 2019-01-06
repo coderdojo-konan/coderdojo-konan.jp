@@ -18,15 +18,7 @@ class Redcarpet::Render::OriginalHTML < Redcarpet::Render::HTML
       resource = OEmbed::Providers.get(oembed_url)
       html = resource.html
 
-      if oembed_url =~ /:\/\/(www.youtube.com|youtu.be)\//
-        %w{width height}.each do |name|
-           if params[name]
-            html.gsub! Regexp.new(name+'="\\d+'), name+'="'+params[name]
-          end
-         end
-      end
-
-      "<div class='oembed #{resource.type}'>#{html}</div>"
+      "<div class='oembed oembed_#{resource.type}'>#{html}</div>"
     rescue OEmbed::NotFound
       warn "No embeddable content at #{oembed_url}"
       "<a href='#{oembed_url}'>#{oembed_url}</a>"
