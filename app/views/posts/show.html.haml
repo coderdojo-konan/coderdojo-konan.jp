@@ -1,4 +1,5 @@
 - provide(:title, @post.title)
+- provide(:desc, truncate(strip_tags(md_to_html(@post.body)), length: 300))
 - provide(:url, request.url)
 
 
