@@ -24,6 +24,7 @@ class ApplicationController < ActionController::Base
         { url:  "/", text: "TOP" },
         { url:  "/visit-interview", text: "見学・取材について" },
         { url:  "/f-and-q", text: "よくある質問 (F&Q)" },
+        { url: "/ninjas-works", text: "参加した Ninja の作品" },
         { url: "/join-as-mentor", text: "メンターとして参加する" }
       ]
 

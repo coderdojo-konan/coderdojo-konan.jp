@@ -5,13 +5,17 @@ class StaticpagesController < ApplicationController
     @contact_form = ContactForm.new
     # @latest_event_url = next_event_url
   end
+
   def next_event_is_still_planned
   end
+
   def ninjas_works
   end
+
   def contact
     @contact_form = ContactForm.new
   end
+  
   def contact_form_send
 
     @contact_form = ContactForm.new(contact_form_params)

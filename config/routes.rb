@@ -20,6 +20,8 @@ Rails.application.routes.draw do
 
   get '/pages' => 'pages#index'
 
+  get '/ninjas-works' => 'staticpages#ninjas_works'
+
 
   resources :users, only: [:show]
 
