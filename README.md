@@ -11,7 +11,7 @@ We are still developing now, but you can see the demo site at [here](https://new
 
 ## How to Contribution
 
-### Operation of git
+### Operation of git - Git の操作
 
 1. Fork this repo.
 2. Create your feature branch. (`git checkout -b <your-new-feature>`)
@@ -19,11 +19,13 @@ We are still developing now, but you can see the demo site at [here](https://new
 4. Push to the branch. (`git push origin <your-new-feature>`)
 5. Create new Pull Request.
 
-### 1. Update pages
+### 1. Update pages - Pages 配下のページの編集・修正
+
+[/pages](https://new-beta.coderdojo-konan.jp/pages）の一覧に表示されているページは、
+[/db/pages](/db/pages) にあるマークダウンファイルを編集することによって編集可能です。
 
 If you want to edit pages that listed in [/pages](https://new-beta.coderdojo-konan.jp/pages),
 you can do it by editing markdown file at [/db/pages](/db/pages).
-
 
 
 ## Licence
@@ -34,6 +36,6 @@ you can do it by editing markdown file at [/db/pages](/db/pages).
 This repository is published under the Apache-2.0 Licence.
 Please see the [LICENCE](/LICENCE) file.
 
-# References
+## References
 
 [coderdojo.jp](https://github.com/coderdojo-japan/coderdojo.jp)
