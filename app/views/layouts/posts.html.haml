@@ -4,6 +4,7 @@
     = render 'head'
 
   %body#page-top
+    = render 'beta_alert_modal'
     = render 'header'
     - flash.each do |key, value|
       #info{style: "display:none" }
