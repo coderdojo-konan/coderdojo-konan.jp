@@ -21,7 +21,7 @@ We are still developing now, but you can see the demo site at [here](https://new
 
 ### 1. Update pages - Pages 配下のページの編集・修正
 
-[/pages](https://new-beta.coderdojo-konan.jp/pages）の一覧に表示されているページは、
+[/pages](https://new-beta.coderdojo-konan.jp/pages) の一覧に表示されているページは、
 [/db/pages](/db/pages) にあるマークダウンファイルを編集することによって編集可能です。
 
 If you want to edit pages that listed in [/pages](https://new-beta.coderdojo-konan.jp/pages),
