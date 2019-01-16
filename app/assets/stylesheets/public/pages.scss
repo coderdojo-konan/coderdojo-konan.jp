@@ -4,15 +4,16 @@
 
 #page-content {
   .page-title {
-    border-bottom: 0.3rem dotted $primary;
+    border-bottom: 0.2rem dotted $primary;
   }
+
   hr {
     max-width: 100%;
     border-width: 100%;
     border-color: $primary;
     margin-bottom: 1.3rem;
   }
-  
+
   h1,
   h2,
   h3 {
