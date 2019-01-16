@@ -37,4 +37,9 @@
   p {
     margin-bottom: 1.5rem
   }
+  table {
+    @extend .table;
+    @extend .table-striped;
+    @extend .table-bordered;
+  }
 }
