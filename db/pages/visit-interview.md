@@ -22,7 +22,7 @@
 ---
 申し訳ございませんが、まだフォームが完成していません。
 
-取材をご希望の方は、以下の内容を、 [contact@coderdojo-konan.media-interesting.info](mailto:contact@coderdojo-konan.media-interesting.info) に送ってください。
+取材をご希望の方は、以下の内容を、 [/contact-form] よりお問い合わせください。
 
 通常、二日位以内にご連絡させていただきますが、担当が忙しい場合は、少し遅れる可能性があります。
 
