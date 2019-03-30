@@ -21,7 +21,7 @@ gem 'uglifier', '>= 1.3.0'
 
 # Design
 gem 'font-awesome-sass'
-gem 'haml-rails'
+gem 'haml-rails', '~> 1.0'
 gem 'simple_form'
 gem 'bootstrap4-datetime-picker-rails'
 
