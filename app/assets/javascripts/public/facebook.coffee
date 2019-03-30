@@ -1,6 +1,11 @@
+window.fbAsyncInit = ->
+  FB.init
+    appId: '560981844422844'
+    xfbml: true
+    version: 'v3.2'
+  FB.AppEvents.logPageView()
+  return
 
-# FacebookSDK
-# https://developers.facebook.com/docs/plugins/page-plugin/
 ((d, s, id) ->
   js = undefined
   fjs = d.getElementsByTagName(s)[0]
@@ -8,12 +13,12 @@
     return
   js = d.createElement(s)
   js.id = id
-  js.src = '//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8'
+  js.src = 'https://connect.facebook.net/en_US/sdk.js'
   fjs.parentNode.insertBefore js, fjs
   return
 ) document, 'script', 'facebook-jssdk'
-# Replace 'facebook-jssdk' with your page id.
-# Compatibility with Turbolinks 5
+
+
 (($) ->
   fbRoot = undefined
 
