@@ -9,16 +9,12 @@ module ApplicationHelper
   end
 
   def next_event_url
-    unless ENV["CODERDOJO_KONAN_JP_OFFLINE_MODE"]
-      latest_event = get_latest_event
-      if !latest_event.nil?
-        if Date.parse(latest_event['started_at']) > Date.today
-          latest_event['event_url']
-        else
-          nil
-        end
+    latest_event = get_latest_event
+    if !latest_event.nil?
+      if Date.parse(latest_event['started_at']) > Date.today
+        latest_event['event_url']
       else
-        "got_error"
+        nil
       end
     else
       nil
