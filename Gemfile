@@ -15,7 +15,7 @@ gem 'toastr-rails'
 
 # CSS / SCSS
 gem 'sassc-rails', '~> 2.0.0'
-gem 'bootstrap', '~> 4.1.1'
+gem "bootstrap", ">= 4.3.1"
 gem 'uglifier', '>= 1.3.0'
 
 
