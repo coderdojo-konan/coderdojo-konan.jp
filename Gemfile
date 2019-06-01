@@ -26,7 +26,6 @@ gem 'simple_form'
 gem 'bootstrap4-datetime-picker-rails'
 
 # Slack
-gem 'omniauth-slack'
 gem 'slack-notifier'
 
 # Posts / Admin
