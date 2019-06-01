@@ -7,6 +7,13 @@
   %section
     .container
       .row
+        - unless @post.published?
+          .col-lg-10.mx-auto.my-3.py-3.bg-danger
+            %h1.text-white.text-center
+              CAUTION!
+            %p.text-white.text-center.mb-0
+              This post is a preview. It's not published!
+      .row
         .col-lg-10.mx-auto.my-3.py-5.bg-white
           .row
             .col-lg-10.headings.mx-auto.page-title.m-2
@@ -46,3 +53,11 @@
           .row
             .col-lg-10.mx-auto
               = raw md_to_html @post.body
+
+      .row
+        - unless @post.published?
+          .col-lg-10.mx-auto.my-3.py-3.bg-danger
+            %h1.text-white.text-center
+              CAUTION!
+            %p.text-white.text-center.mb-0
+              This post is a preview. It's not published!
