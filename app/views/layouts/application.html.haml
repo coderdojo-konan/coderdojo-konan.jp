@@ -8,6 +8,7 @@
     = javascript_include_tag 'public', 'data-turbolinks-track' => true
     = csrf_meta_tags
     = favicon_link_tag
+    = yield :recaptcha_js
 
   %body
     = yield

@@ -21,7 +21,7 @@ class StaticpagesController < ApplicationController
     @contact_form = ContactForm.new(contact_form_params)
 
     respond_to do |format|
-      if NewGoogleRecaptcha.human?(params[:new_google_recaptcha_token], @contact_form) && @contact_form.save
+      if NewGoogleRecaptcha.human?(params[:new_google_recaptcha_token], "checkout", NewGoogleRecaptcha.minimum_score, @contact_form) && @contact_form.save
         flash[:notice] = 'お問い合わせの送信が完了しました'
         format.html { redirect_to :action => "index" }
         format.json { render :show, status: :ok, location: @contact_form }
