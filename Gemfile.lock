@@ -157,6 +157,10 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
+    mailgun_rails (0.9.0)
+      actionmailer (>= 3.2.13)
+      json (>= 1.7.7)
+      rest-client (>= 1.6.7)
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
     method_source (0.9.2)
@@ -344,6 +348,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   listen
+  mailgun_rails
   momentjs-rails
   new_google_recaptcha
   pg

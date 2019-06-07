@@ -82,18 +82,7 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  config.action_mailer.default_url_options = { :host => ENV["MAILER_HOST"] }
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    :address => "smtp.zoho.com",
-    :port => 587,
-    :user_name => ENV["EMAIL_SMTP_USER_NAME"],
-    :password => ENV["EMAIL_SMTP_PASSWORD"],
-    :authentication => :plain,
-    :enable_starttls_auto => true
-  }
-
+ 
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
@@ -104,16 +93,13 @@ Rails.application.configure do
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
 
-  config.action_mailer.default_url_options = { host: ENV['DEFAULT_URL_OPTIONS_HOST'] }
+  config.action_mailer.default_url_options = { host: ENV['MAILER_HOST'] }
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    :address => "smtp.zoho.com",
-    :port => 587,
-    :user_name => ENV["EMAIL_SMTP_USER_NAME"],
-    :password => ENV["EMAIL_SMTP_PASSWORD"],
-    :authentication => :plain,
-    :enable_starttls_auto => true
+  
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+		api_key: ENV['MAILGUN_API_KEY'],
+		domain: ENV['MAILGUN_DOMAIN']
   }
 
 
