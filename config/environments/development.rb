@@ -61,13 +61,9 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    :address => "smtp.zoho.com",
-    :port => 587,
-    :user_name => ENV["EMAIL_SMTP_USER_NAME"],
-    :password => ENV["EMAIL_SMTP_PASSWORD"],
-    :authentication => :plain,
-    :enable_starttls_auto => true
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+		api_key: ENV['MAILGUN_API_KEY'],
+		domain: ENV['MAILGUN_DOMAIN']
   }
 end

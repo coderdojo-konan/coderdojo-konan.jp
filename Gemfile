@@ -42,6 +42,7 @@ gem 'bcrypt', '3.1.11'
 gem 'redcarpet'
 gem 'dotenv-rails'
 gem 'new_google_recaptcha'
+gem 'mailgun_rails'
 gem 'rails_12factor', group: :production
 
 gem "ruby-oembed"
