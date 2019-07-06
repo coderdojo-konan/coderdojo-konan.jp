@@ -11,8 +11,8 @@ module ApplicationHelper
   def next_event_url
     latest_event = get_latest_event
     if !latest_event.nil?
-      if Date.parse(latest_event['started_at']) > Date.today
-        latest_event['event_url']
+      if Date.parse(latest_event['starts_at']) > Date.today
+        latest_event['public_url']
       else
         nil
       end
@@ -24,15 +24,15 @@ module ApplicationHelper
   private
   def get_latest_event
     begin
-     response = rest_client.get params: {:series_id => 3786, :order => 2}
+     response = rest_client('/groups/coderdojo-konan/events').get params: { :locale => 'ja', :sort => 'starts_at' }
 
      json = JSON.parse response.body
-     json['events'].first
+     json.first['event']
     rescue RestClient::ExceptionWithResponse => e
      nil
     end
   end
-  def rest_client
-    RestClient::Resource.new 'https://connpass.com/api/v1/event/'
+  def rest_client(url)
+    RestClient::Resource.new "https://api.doorkeeper.jp#{url}"
   end
 end
