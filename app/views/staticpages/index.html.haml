@@ -33,10 +33,10 @@
           %br/
           %strong>"未来を創るクリエイター"
           になれ！
-        - unless next_event_url.nil?
+        - unless next_event_url.blank?
           = link_to "次回の開催をCheck!", next_event_url, class: 'btn btn-primary btn-xl js-scroll-trigger text-white', target: "_new"
         - else
-          = link_to "次回の申し込み受付はまだ準備中です...", '', class: 'btn btn-primary btn-xl js-scroll-trigger text-white disabled', target: "_new"
+          = link_to "次回の申し込みページは準備中です...", '', class: 'btn btn-primary btn-xl js-scroll-trigger text-white disabled', target: "_new"
 
 %section#about.bg-primary.p-5
   .container
@@ -60,7 +60,7 @@
         - unless next_event_url.nil?
           = link_to "次回の開催をCheck!", next_event_url, class: 'btn btn-light btn-xl js-scroll-trigger', target: "_new"
         - else
-          = link_to "次回の申し込み受付はまだ準備中です...", next_event_url, class: 'btn btn-light btn-xl js-scroll-trigger disabled', target: "_new"
+          = link_to "次回の申し込みページは準備中です...", next_event_url, class: 'btn btn-light btn-xl js-scroll-trigger disabled', target: "_new"
 %section#thinking-together.bg-dark.p-3
   .container
     .row

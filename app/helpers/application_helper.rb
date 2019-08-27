@@ -27,7 +27,7 @@ module ApplicationHelper
      response = rest_client('/groups/coderdojo-konan/events').get params: { :locale => 'ja', :sort => 'starts_at' }
 
      json = JSON.parse response.body
-     json.first['event']
+     json.present? ? json.first['event'] : nil
     rescue RestClient::ExceptionWithResponse => e
      nil
     end
